@@ -16,7 +16,7 @@ export const resources: Resource[] = [
     image: '/assets/original/site/homogenization-lattice-skin.png',
     titleUrl: '/ThinHomogenization.html',
     links: [
-      { label: 'GitHub', url: 'https://github.com/TopJournals/Thin_Walled_Homogenization' },
+      { label: 'GitHub', url: 'https://github.com/TopJournals/ThinWalledHomogenization' },
       { label: 'DOI', url: 'https://arxiv.org/abs/2604.23181' }
     ]
   }
