@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --academic-blue: #1d4ed8;
+  --academic-light: #f8fafc;
+  --academic-border: #e2e8f0;
+  --academic-text: #334155;
+  --academic-heading: #0f172a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--academic-text);
+  font-family: theme('fontFamily.sans');
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--academic-blue);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+}
+
+.academic-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--academic-border);
+}
+
+.nav-dropdown {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  color: var(--academic-heading);
+  font-size: clamp(1.55rem, 2vw, 1.875rem);
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.section-heading::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--academic-blue);
+  content: '';
+}
+
+.abstract-box {
+  margin: 2rem 0;
+  border-left: 4px solid var(--academic-blue);
+  background-color: var(--academic-light);
+  padding: 1.5rem 2rem;
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: var(--academic-blue);
+}
+
+.hover-card {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow:
+    0 10px 24px rgba(15, 23, 42, 0.06),
+    0 3px 8px rgba(15, 23, 42, 0.04);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main > * {
+    animation: page-enter 520ms ease both;
+  }
+
+  main > *:nth-child(2) {
+    animation-delay: 60ms;
+  }
+
+  main > *:nth-child(3) {
+    animation-delay: 120ms;
+  }
+
+  main > *:nth-child(4) {
+    animation-delay: 180ms;
+  }
+
+  main > *:nth-child(5) {
+    animation-delay: 240ms;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaWeb Admin</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --blue: #1d4ed8;
+      --bg: #f8fafc;
+      --border: #e2e8f0;
+      --text: #334155;
+      --heading: #0f172a;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .shell {
+      display: grid;
+      min-height: 100vh;
+      grid-template-columns: 260px 1fr;
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--border);
+      background: #fff;
+      padding: 24px 18px;
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      color: var(--heading);
+    }
+
+    .muted {
+      color: #64748b;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .nav-button,
+    button,
+    .secondary-button {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--heading);
+      cursor: pointer;
+      font: inherit;
+      transition: 160ms ease;
+    }
+
+    .nav-button {
+      display: block;
+      width: 100%;
+      margin-top: 12px;
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    .nav-button.active,
+    .nav-button:hover,
+    button:hover,
+    .secondary-button:hover {
+      border-color: #bfdbfe;
+      background: #eff6ff;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 18px 0 24px;
+    }
+
+    .primary-button {
+      border: 1px solid var(--blue);
+      background: var(--blue);
+      color: #fff;
+      padding: 10px 16px;
+    }
+
+    .secondary-button,
+    button {
+      padding: 10px 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+    }
+
+    .panel {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      padding: 18px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      max-height: calc(100vh - 260px);
+      overflow: auto;
+    }
+
+    .item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      cursor: pointer;
+      transition: 160ms ease;
+    }
+
+    .item:hover,
+    .item.active {
+      border-color: #93c5fd;
+      background: #f8fbff;
+    }
+
+    .item-title {
+      color: var(--heading);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .item-meta {
+      margin-top: 6px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: inherit;
+      color: var(--heading);
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 28px;
+    }
+
+    .checkbox input {
+      width: auto;
+    }
+
+    .status {
+      margin-bottom: 12px;
+      min-height: 22px;
+      color: #166534;
+      font-size: 14px;
+    }
+
+    .status.error {
+      color: #b91c1c;
+    }
+
+    @media (max-width: 960px) {
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .list {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <h1>MetaWeb Admin</h1>
+      <p class="muted" style="margin-top: 8px;">Manage local data for the full site, including papers, news, people, honors, and profile content.</p>
+      <button class="nav-button active" data-collection="publications">Publications</button>
+      <button class="nav-button" data-collection="news">News</button>
+      <button class="nav-button" data-collection="people">People</button>
+      <button class="nav-button" data-collection="honors">Honors</button>
+      <button class="nav-button" data-collection="conference">Conference</button>
+      <button class="nav-button" data-collection="patents">Patents</button>
+      <button class="nav-button" data-collection="software">Software</button>
+      <button class="nav-button" data-collection="standards">Standards</button>
+      <button class="nav-button" data-collection="site-profile">Site Profile</button>
+    </aside>
+
+    <main class="content">
+      <h2 id="section-title">Publications</h2>
+      <p class="muted" id="section-description" style="margin-top: 8px;">Add, edit, and remove publication records.</p>
+      <div class="toolbar">
+        <button class="primary-button" id="save-all">Save All</button>
+        <button class="secondary-button" id="new-item">New Item</button>
+        <button class="secondary-button" id="delete-item">Delete Current</button>
+      </div>
+      <div class="status" id="status"></div>
+
+      <div class="grid">
+        <section class="panel">
+          <div class="field full" style="margin-bottom: 14px;">
+            <label for="search">Search</label>
+            <input id="search" type="search" placeholder="Filter current collection">
+          </div>
+          <div class="list" id="item-list"></div>
+        </section>
+
+        <section class="panel">
+          <form id="editor-form" class="form-grid"></form>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const linesToText = (items) => Array.isArray(items) ? items.join('\n') : '';
+    const textToLines = (value) => value.split('\n').map((item) => item.trim()).filter(Boolean);
+
+    const schemas = {
+      publications: {
+        title: 'Publications',
+        description: 'Add, edit, and remove publication records.',
+        singular: 'publication',
+        fields: [
+          { key: 'year', label: 'Year', type: 'number' },
+          { key: 'title', label: 'Title', type: 'text', full: true },
+          { key: 'authors', label: 'Authors', type: 'textarea', full: true },
+          { key: 'venue', label: 'Venue', type: 'textarea', full: true },
+          { key: 'tags', label: 'Tags (comma separated)', type: 'text', full: true },
+          { key: 'paperUrl', label: 'Paper URL', type: 'text', full: true },
+          { key: 'status', label: 'Status', type: 'text' },
+          { key: 'featured', label: 'Featured', type: 'checkbox' },
+          { key: 'highlyCited', label: 'Highly Cited', type: 'checkbox' }
+        ],
+        makeEmpty: () => ({
+          year: new Date().getFullYear(),
+          title: '',
+          authors: '',
+          venue: '',
+          tags: [],
+          paperUrl: '',
+          status: '',
+          featured: false,
+          highlyCited: false
+        }),
+        toFormData: (item) => ({
+          ...item,
+          tags: Array.isArray(item.tags) ? item.tags.join(', ') : ''
+        }),
+        fromFormData: (formData) => ({
+          year: Number(formData.year || 0),
+          title: formData.title.trim(),
+          authors: formData.authors.trim(),
+          venue: formData.venue.trim(),
+          tags: formData.tags.split(',').map((tag) => tag.trim()).filter(Boolean),
+          paperUrl: formData.paperUrl.trim(),
+          status: formData.status.trim(),
+          featured: Boolean(formData.featured),
+          highlyCited: Boolean(formData.highlyCited)
+        }),
+        summarize: (item) => `${item.year} · ${item.title}`,
+        normalize: (item) => ({
+          ...item,
+          tags: Array.isArray(item.tags) ? item.tags : [],
+          featured: Boolean(item.featured),
+          highlyCited: Boolean(item.highlyCited),
+          paperUrl: item.paperUrl ?? '',
+          status: item.status ?? ''
+        })
+      },
+      news: {
+        title: 'News',
+        description: 'Add, edit, and remove news items.',
+        singular: 'news item',
+        fields: [
+          { key: 'date', label: 'Date', type: 'date' },
+          { key: 'text', label: 'Text', type: 'textarea', full: true },
+          { key: 'highlight', label: 'Highlight', type: 'checkbox' }
+        ],
+        makeEmpty: () => ({
+          date: new Date().toISOString().slice(0, 10),
+          text: '',
+          highlight: false
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          date: formData.date,
+          text: formData.text.trim(),
+          highlight: Boolean(formData.highlight)
+        }),
+        summarize: (item) => `${item.date} · ${item.text.slice(0, 60)}`,
+        normalize: (item) => ({
+          ...item,
+          highlight: Boolean(item.highlight)
+        })
+      },
+      people: {
+        title: 'People',
+        description: 'Maintain student and researcher entries shown on the people page.',
+        singular: 'person',
+        fields: [
+          { key: 'name', label: 'Name', type: 'text' },
+          { key: 'role', label: 'Role', type: 'text' },
+          { key: 'start', label: 'Start', type: 'text' }
+        ],
+        makeEmpty: () => ({
+          name: '',
+          role: '',
+          start: ''
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          name: formData.name.trim(),
+          role: formData.role.trim(),
+          start: formData.start.trim()
+        }),
+        summarize: (item) => `${item.name} · ${item.role}`,
+        normalize: (item) => ({
+          ...item,
+          name: item.name ?? '',
+          role: item.role ?? '',
+          start: item.start ?? ''
+        })
+      },
+      honors: {
+        title: 'Honors',
+        description: 'Update honors and awards shown across the site.',
+        singular: 'honor',
+        fields: [
+          { key: 'year', label: 'Year', type: 'number' },
+          { key: 'title', label: 'Title', type: 'text', full: true },
+          { key: 'description', label: 'Description', type: 'textarea', full: true }
+        ],
+        makeEmpty: () => ({
+          year: new Date().getFullYear(),
+          title: '',
+          description: ''
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          year: Number(formData.year || 0),
+          title: formData.title.trim(),
+          description: formData.description.trim()
+        }),
+        summarize: (item) => `${item.year} · ${item.title}`,
+        normalize: (item) => ({
+          ...item,
+          year: Number(item.year || 0),
+          title: item.title ?? '',
+          description: item.description ?? ''
+        })
+      },
+      conference: {
+        title: 'Conference',
+        description: 'Edit conference papers and presentation records grouped under publications.',
+        singular: 'conference record',
+        fields: [
+          { key: 'kind', label: 'Kind', type: 'select', options: ['Conference Paper', 'Presentation'] },
+          { key: 'date', label: 'Date', type: 'date' },
+          { key: 'title', label: 'Title', type: 'text', full: true },
+          { key: 'contributors', label: 'Contributors', type: 'textarea', full: true },
+          { key: 'venue', label: 'Venue', type: 'textarea', full: true },
+          { key: 'location', label: 'Location', type: 'text' },
+          { key: 'url', label: 'URL', type: 'text', full: true }
+        ],
+        makeEmpty: () => ({
+          kind: 'Presentation',
+          date: new Date().toISOString().slice(0, 10),
+          title: '',
+          contributors: '',
+          venue: '',
+          location: '',
+          url: ''
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          kind: formData.kind,
+          date: formData.date,
+          title: formData.title.trim(),
+          contributors: formData.contributors.trim(),
+          venue: formData.venue.trim(),
+          location: formData.location.trim(),
+          url: formData.url.trim()
+        }),
+        summarize: (item) => `${item.date} · ${item.title}`,
+        normalize: (item) => ({
+          ...item,
+          kind: item.kind ?? 'Presentation',
+          date: item.date ?? '',
+          title: item.title ?? '',
+          contributors: item.contributors ?? '',
+          venue: item.venue ?? '',
+          location: item.location ?? '',
+          url: item.url ?? ''
+        })
+      },
+      patents: {
+        title: 'Patents',
+        description: 'Maintain patent records linked from publications.',
+        singular: 'patent',
+        fields: [
+          { key: 'year', label: 'Year', type: 'number' },
+          { key: 'type', label: 'Type', type: 'text' },
+          { key: 'title', label: 'Title', type: 'text', full: true },
+          { key: 'inventors', label: 'Inventors', type: 'textarea', full: true }
+        ],
+        makeEmpty: () => ({
+          year: new Date().getFullYear(),
+          type: '',
+          title: '',
+          inventors: ''
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          year: Number(formData.year || 0),
+          type: formData.type.trim(),
+          title: formData.title.trim(),
+          inventors: formData.inventors.trim()
+        }),
+        summarize: (item) => `${item.year} · ${item.title}`,
+        normalize: (item) => ({
+          ...item,
+          year: Number(item.year || 0),
+          type: item.type ?? '',
+          title: item.title ?? '',
+          inventors: item.inventors ?? ''
+        })
+      },
+      software: {
+        title: 'Software',
+        description: 'Edit software copyright records shown in publications.',
+        singular: 'software record',
+        fields: [
+          { key: 'year', label: 'Year', type: 'number' },
+          { key: 'title', label: 'Title', type: 'text', full: true },
+          { key: 'holders', label: 'Holders', type: 'textarea', full: true },
+          { key: 'authority', label: 'Authority', type: 'textarea', full: true }
+        ],
+        makeEmpty: () => ({
+          year: new Date().getFullYear(),
+          title: '',
+          holders: '',
+          authority: ''
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          year: Number(formData.year || 0),
+          title: formData.title.trim(),
+          holders: formData.holders.trim(),
+          authority: formData.authority.trim()
+        }),
+        summarize: (item) => `${item.year} · ${item.title}`,
+        normalize: (item) => ({
+          ...item,
+          year: Number(item.year || 0),
+          title: item.title ?? '',
+          holders: item.holders ?? '',
+          authority: item.authority ?? ''
+        })
+      },
+      standards: {
+        title: 'Standards',
+        description: 'Update standards listed under the patents page.',
+        singular: 'standard',
+        fields: [
+          { key: 'year', label: 'Year', type: 'number' },
+          { key: 'code', label: 'Code', type: 'text' },
+          { key: 'title', label: 'Title', type: 'text', full: true },
+          { key: 'authority', label: 'Authority', type: 'textarea', full: true }
+        ],
+        makeEmpty: () => ({
+          year: new Date().getFullYear(),
+          code: '',
+          title: '',
+          authority: ''
+        }),
+        toFormData: (item) => ({ ...item }),
+        fromFormData: (formData) => ({
+          year: Number(formData.year || 0),
+          code: formData.code.trim(),
+          title: formData.title.trim(),
+          authority: formData.authority.trim()
+        }),
+        summarize: (item) => `${item.year} · ${item.code || item.title}`,
+        normalize: (item) => ({
+          ...item,
+          year: Number(item.year || 0),
+          code: item.code ?? '',
+          title: item.title ?? '',
+          authority: item.authority ?? ''
+        })
+      },
+      'site-profile': {
+        title: 'Site Profile',
+        description: 'Edit the lab identity, biography, and professional activities used across the site.',
+        singular: 'site profile',
+        singleton: true,
+        fields: [
+          { key: 'name', label: 'Site Name', type: 'text' },
+          { key: 'title', label: 'Page Title', type: 'text' },
+          { key: 'leader', label: 'Leader', type: 'text' },
+          { key: 'leaderChinese', label: 'Leader (Chinese)', type: 'text' },
+          { key: 'email', label: 'Email', type: 'text' },
+          { key: 'url', label: 'Canonical URL', type: 'text', full: true },
+          { key: 'affiliation', label: 'Affiliation', type: 'textarea', full: true },
+          { key: 'address', label: 'Address', type: 'textarea', full: true },
+          { key: 'description', label: 'Description', type: 'textarea', full: true },
+          { key: 'scholarUrl', label: 'Scholar URL', type: 'text', full: true },
+          { key: 'researchGateUrl', label: 'ResearchGate URL', type: 'text', full: true },
+          { key: 'biography', label: 'Biography (one paragraph per line)', type: 'textarea', full: true },
+          { key: 'professionalActivities', label: 'Professional Activities (one item per line)', type: 'textarea', full: true }
+        ],
+        makeEmpty: () => ({
+          name: '',
+          title: '',
+          description: '',
+          url: '',
+          leader: '',
+          leaderChinese: '',
+          affiliation: '',
+          address: '',
+          email: '',
+          scholarUrl: '',
+          researchGateUrl: '',
+          biography: [],
+          professionalActivities: []
+        }),
+        toFormData: (item) => ({
+          ...item,
+          biography: linesToText(item.biography),
+          professionalActivities: linesToText(item.professionalActivities)
+        }),
+        fromFormData: (formData) => ({
+          name: formData.name.trim(),
+          title: formData.title.trim(),
+          description: formData.description.trim(),
+          url: formData.url.trim(),
+          leader: formData.leader.trim(),
+          leaderChinese: formData.leaderChinese.trim(),
+          affiliation: formData.affiliation.trim(),
+          address: formData.address.trim(),
+          email: formData.email.trim(),
+          scholarUrl: formData.scholarUrl.trim(),
+          researchGateUrl: formData.researchGateUrl.trim(),
+          biography: textToLines(formData.biography),
+          professionalActivities: textToLines(formData.professionalActivities)
+        }),
+        summarize: () => 'Lab identity and profile',
+        normalize: (item) => ({
+          ...item,
+          name: item.name ?? '',
+          title: item.title ?? '',
+          description: item.description ?? '',
+          url: item.url ?? '',
+          leader: item.leader ?? '',
+          leaderChinese: item.leaderChinese ?? '',
+          affiliation: item.affiliation ?? '',
+          address: item.address ?? '',
+          email: item.email ?? '',
+          scholarUrl: item.scholarUrl ?? '',
+          researchGateUrl: item.researchGateUrl ?? '',
+          biography: Array.isArray(item.biography) ? item.biography : [],
+          professionalActivities: Array.isArray(item.professionalActivities) ? item.professionalActivities : []
+        })
+      }
+    };
+
+    const state = {
+      collection: 'publications',
+      items: [],
+      filteredIndexes: [],
+      activeIndex: -1
+    };
+
+    const statusEl = document.getElementById('status');
+    const sectionTitleEl = document.getElementById('section-title');
+    const sectionDescriptionEl = document.getElementById('section-description');
+    const itemListEl = document.getElementById('item-list');
+    const formEl = document.getElementById('editor-form');
+    const searchEl = document.getElementById('search');
+
+    const setStatus = (message, isError = false) => {
+      statusEl.textContent = message;
+      statusEl.classList.toggle('error', isError);
+    };
+
+    const getSchema = () => schemas[state.collection];
+
+    const normalizeItem = (item, collection = state.collection) => {
+      const schema = schemas[collection];
+      return schema.normalize ? schema.normalize(item) : item;
+    };
+
+    const renderList = () => {
+      const schema = getSchema();
+      const query = searchEl.value.trim().toLowerCase();
+      state.filteredIndexes = [];
+      itemListEl.innerHTML = '';
+
+      state.items.forEach((item, index) => {
+        const text = JSON.stringify(item).toLowerCase();
+        if (query && !text.includes(query)) return;
+        state.filteredIndexes.push(index);
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `item ${index === state.activeIndex ? 'active' : ''}`;
+        button.innerHTML = `
+          <div class="item-title">${schema.summarize(item)}</div>
+          <div class="item-meta">#${index + 1}</div>
+        `;
+        button.addEventListener('click', () => {
+          state.activeIndex = index;
+          renderList();
+          renderForm();
+        });
+        itemListEl.appendChild(button);
+      });
+    };
+
+    const renderForm = () => {
+      const schema = getSchema();
+      const item = state.items[state.activeIndex];
+      const formData = item ? schema.toFormData(item) : schema.toFormData(schema.makeEmpty());
+      formEl.innerHTML = '';
+
+      schema.fields.forEach((field) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = `field ${field.full ? 'full' : ''} ${field.type === 'checkbox' ? 'checkbox' : ''}`;
+
+        const label = document.createElement('label');
+        label.textContent = field.label;
+        label.htmlFor = `field-${field.key}`;
+
+        let input;
+        if (field.type === 'textarea') {
+          input = document.createElement('textarea');
+        } else if (field.type === 'select') {
+          input = document.createElement('select');
+          field.options.forEach((option) => {
+            const optionEl = document.createElement('option');
+            optionEl.value = option;
+            optionEl.textContent = option;
+            input.appendChild(optionEl);
+          });
+        } else {
+          input = document.createElement('input');
+          input.type = field.type === 'checkbox' ? 'checkbox' : field.type;
+        }
+
+        input.id = `field-${field.key}`;
+        input.name = field.key;
+
+        if (field.type === 'checkbox') {
+          input.checked = Boolean(formData[field.key]);
+          wrapper.appendChild(input);
+          wrapper.appendChild(label);
+        } else {
+          input.value = formData[field.key] ?? '';
+          wrapper.appendChild(label);
+          wrapper.appendChild(input);
+        }
+
+        formEl.appendChild(wrapper);
+      });
+    };
+
+    const readCurrentForm = () => {
+      const schema = getSchema();
+      const formData = {};
+
+      schema.fields.forEach((field) => {
+        const input = document.getElementById(`field-${field.key}`);
+        formData[field.key] = field.type === 'checkbox' ? input.checked : input.value;
+      });
+
+      return schema.fromFormData(formData);
+    };
+
+    const saveCurrentItem = () => {
+      if (state.activeIndex < 0) return;
+      state.items[state.activeIndex] = normalizeItem(readCurrentForm());
+    };
+
+    const renderCollectionMeta = () => {
+      const schema = getSchema();
+      sectionTitleEl.textContent = schema.title;
+      sectionDescriptionEl.textContent = schema.description;
+      document.getElementById('new-item').disabled = Boolean(schema.singleton);
+      document.getElementById('delete-item').disabled = Boolean(schema.singleton);
+      document.querySelectorAll('.nav-button').forEach((button) => {
+        button.classList.toggle('active', button.dataset.collection === state.collection);
+      });
+    };
+
+    const loadCollection = async (collection) => {
+      saveCurrentItem();
+      state.collection = collection;
+      state.activeIndex = -1;
+      searchEl.value = '';
+      renderCollectionMeta();
+      setStatus('Loading...');
+
+      const response = await fetch(`/api/${collection}`);
+      const data = await response.json();
+      state.items = data.map((item) => normalizeItem(item, collection));
+      if (schemas[collection].singleton && state.items.length === 0) {
+        state.items = [normalizeItem(schemas[collection].makeEmpty(), collection)];
+      }
+      state.activeIndex = state.items.length ? 0 : -1;
+      renderList();
+      renderForm();
+      setStatus(`${schemaTitle(collection)} loaded.`);
+    };
+
+    const schemaTitle = (collection) => schemas[collection].title;
+
+    document.getElementById('save-all').addEventListener('click', async () => {
+      try {
+        saveCurrentItem();
+        const response = await fetch(`/api/${state.collection}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(state.items)
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || 'Save failed.');
+        renderList();
+        setStatus(`${schemaTitle(state.collection)} saved.`);
+      } catch (error) {
+        setStatus(error.message || 'Save failed.', true);
+      }
+    });
+
+    document.getElementById('new-item').addEventListener('click', () => {
+      saveCurrentItem();
+      const schema = getSchema();
+      if (schema.singleton) return;
+      const item = normalizeItem(schema.makeEmpty());
+      state.items.unshift(item);
+      state.activeIndex = 0;
+      renderList();
+      renderForm();
+      setStatus(`New ${schema.singular} ready.`);
+    });
+
+    document.getElementById('delete-item').addEventListener('click', () => {
+      const schema = getSchema();
+      if (schema.singleton || state.activeIndex < 0) return;
+      if (state.activeIndex < 0) return;
+      state.items.splice(state.activeIndex, 1);
+      state.activeIndex = state.items.length ? Math.max(0, state.activeIndex - 1) : -1;
+      renderList();
+      renderForm();
+      setStatus('Current item deleted. Click Save All to persist.');
+    });
+
+    document.querySelectorAll('.nav-button').forEach((button) => {
+      button.addEventListener('click', () => loadCollection(button.dataset.collection));
+    });
+
+    searchEl.addEventListener('input', renderList);
+
+    formEl.addEventListener('input', () => {
+      if (state.activeIndex < 0) return;
+      saveCurrentItem();
+      renderList();
+    });
+
+    loadCollection('publications');
+  </script>
+</body>
+</html>

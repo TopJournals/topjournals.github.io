@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionIntro from '../../components/SectionIntro.astro';
+import { resources } from '../../data/resources';
+---
+
+<BaseLayout title="Resources | Metastructure Lab">
+  <section class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+    <SectionIntro
+      title="Resources"
+    />
+    <div class="space-y-6">
+      {resources.map((resource) => (
+        <article class="overflow-hidden rounded border border-slate-200 bg-white shadow-sm">
+          <div class="grid gap-0 md:grid-cols-[320px_1fr]">
+            <div class="flex items-center justify-center bg-slate-50 p-4">
+              <img src={resource.image} alt={resource.title} class="block h-auto w-full object-contain" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <p class="mb-3 inline-flex rounded bg-blue-50 px-2.5 py-1 text-xs font-semibold text-academic-blue">{resource.kind}</p>
+              <h2 class="text-xl font-bold leading-snug text-academic-heading">
+                {resource.titleUrl ? (
+                  <a href={resource.titleUrl} class="hover:text-academic-blue hover:underline">
+                    {resource.title}
+                  </a>
+                ) : (
+                  resource.title
+                )}
+              </h2>
+              <p class="mt-4 text-sm leading-7 text-slate-600">{resource.summary}</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                {resource.links.map((link) => (
+                  <a href={link.url} target="_blank" rel="noreferrer" class="rounded border border-slate-300 px-4 py-2 text-sm font-semibold text-academic-heading hover:bg-slate-50">{link.label}</a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

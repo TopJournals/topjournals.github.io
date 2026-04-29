@@ -1,0 +1,19 @@
+---
+import type { NewsItem } from '../data/news';
+import { highlightDaweiLi } from '../utils/highlightName';
+
+type Props = {
+  items: NewsItem[];
+};
+
+const { items } = Astro.props;
+---
+
+<div class="divide-y divide-slate-200 border-y border-slate-200">
+  {items.map((item) => (
+    <article class="grid gap-2 py-4 md:grid-cols-[120px_1fr]">
+      <time datetime={item.date} class="text-sm font-semibold text-slate-500">{item.date}</time>
+      <p class={item.highlight ? 'font-medium text-academic-heading' : 'text-slate-600'} set:html={highlightDaweiLi(item.text)} />
+    </article>
+  ))}
+</div>

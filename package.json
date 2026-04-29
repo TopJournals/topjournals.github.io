@@ -1,0 +1,22 @@
+{
+  "name": "metaweb",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "admin": "node admin/server.mjs",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^4.16.18",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}

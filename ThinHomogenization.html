@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPS-H: A 99-Line Homogenization Code for Lattice-skin Plate Structures</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        academic: {
+                            blue: '#1d4ed8',
+                            light: '#f8fafc',
+                            border: '#e2e8f0',
+                            text: '#334155',
+                            heading: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #334155;
+            line-height: 1.7;
+        }
+
+        .academic-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-heading {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #1d4ed8;
+        }
+
+        .abstract-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #1d4ed8;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+
+        pre[class*="language-"] {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+        }
+
+        .bibtex-block {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: #475569;
+            white-space: pre-wrap;
+            border: 1px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-academic-blue selection:text-white">
+    <nav class="fixed w-full z-50 academic-nav">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2 rounded focus:outline-none focus:ring-2 focus:ring-academic-blue/30">
+                    <i class="ph-bold ph-hexagon text-2xl text-academic-blue"></i>
+                    <span class="font-bold text-academic-heading text-xl tracking-tight">LPS-H Code</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-slate-600 hover:text-academic-blue transition-colors">Home</a>
+                    <a href="#abstract" class="text-sm font-medium text-slate-600 hover:text-academic-blue transition-colors">Abstract</a>
+                    <a href="#framework" class="text-sm font-medium text-slate-600 hover:text-academic-blue transition-colors">Framework</a>
+                    <a href="#code" class="text-sm font-medium text-slate-600 hover:text-academic-blue transition-colors">Code</a>
+                    <a href="#results" class="text-sm font-medium text-slate-600 hover:text-academic-blue transition-colors">Results</a>
+                    <a href="#citation" class="text-sm font-medium text-slate-600 hover:text-academic-blue transition-colors">Citation</a>
+                </div>
+                <div>
+                    <a href="https://github.com/TopJournals/Thin_Walled_Homogenization" target="_blank" class="inline-flex items-center justify-center px-4 py-2 border border-slate-300 text-sm font-medium rounded text-slate-700 bg-white hover:bg-slate-50 transition-colors">
+                        <i class="ph ph-github-logo text-lg mr-2"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-white border-b border-academic-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 border border-slate-200 text-sm text-slate-600 bg-slate-50 rounded-full">
+                <i class="ph-fill ph-article text-academic-blue"></i> arXiv: 2604.23181v1 [cs.CE]
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-bold text-academic-heading tracking-tight leading-tight mb-6">
+                A 99-Line Homogenization Code for Lattice-skin Plate Structures
+            </h1>
+
+            <p class="text-xl text-slate-500 mb-8 font-light">
+                Open-source homogenization for finite-thickness lattice-skin plate and shell structures
+            </p>
+
+            <div class="flex flex-col items-center justify-center space-y-2 mb-8 text-academic-text">
+                <p class="font-medium">
+                    Zhongkai Ji<sup>1</sup>, <strong>Dawei Li</strong><sup>2,*</sup>, Yong Zhao<sup>1,*</sup>, Wenhe Liao<sup>2</sup>
+                </p>
+                <p class="text-sm text-slate-500">
+                    <sup>1</sup> Shanghai Key Laboratory of Digital Manufacture for Thin-Walled Structures, Shanghai Jiao Tong University, Shanghai 200240, PR China<br>
+                    <sup>2</sup> School of Mechanical Engineering, Nanjing University of Science and Technology, Nanjing 210094, PR China
+                </p>
+                <p class="text-sm text-slate-500">
+                    *Corresponding authors: ldw@njust.edu.cn; yongzhao@sjtu.edu.cn
+                </p>
+            </div>
+
+            <div class="flex justify-center gap-4">
+                <a href="index.html" class="px-6 py-2.5 text-sm font-medium rounded text-academic-heading bg-white border border-slate-300 hover:bg-slate-50 transition-colors flex items-center">
+                    <i class="ph ph-house mr-2 text-lg"></i> Back to Home
+                </a>
+                <a href="https://arxiv.org/abs/2604.23181" target="_blank" class="px-6 py-2.5 text-sm font-medium rounded text-white bg-academic-blue hover:bg-blue-800 transition-colors shadow-sm flex items-center">
+                    <i class="ph ph-file-pdf mr-2 text-lg"></i> Read Paper
+                </a>
+                <a href="https://github.com/TopJournals/Thin_Walled_Homogenization" target="_blank" class="px-6 py-2.5 text-sm font-medium rounded text-academic-heading bg-white border border-slate-300 hover:bg-slate-50 transition-colors flex items-center">
+                    <i class="ph ph-code mr-2 text-lg"></i> GitHub Repo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+        <section id="abstract">
+            <h2 class="section-heading">Abstract</h2>
+            <div class="abstract-box">
+                <p class="text-academic-text text-justify">
+                    Recent years have seen growing application potential for Lattice-skin Plate Structures in advanced manufacturing fields such as aerospace and automotive engineering. For multiscale performance evaluation of such structures, conventional homogenization methods for lattice-filled volume structures are often used for equivalent analysis. However, in finite-thickness Lattice-skin Plate Structures, periodic boundary conditions imposed along the three orthogonal directions of the representative cell cannot adequately capture the boundary effect of the free surfaces in the thickness direction, which introduces bias into the prediction of effective properties.
+                </p>
+                <p class="mt-4 text-academic-text text-justify">
+                    To reduce this bias, this study develops and open-sources a homogenization method for Lattice-skin Plate Structures, forming an open-source computational framework for this class of structures. Representative numerical examples show that the framework can stably extract effective plate/shell stiffness matrices and can be extended to predict multiphase material properties and analyze steady-state heat conduction. The tool provides an open and reusable analysis foundation for the high-fidelity design of multifunctional lightweight structures.
+                </p>
+            </div>
+        </section>
+
+        <section id="framework">
+            <h2 class="section-heading">Framework</h2>
+            <p class="mb-8 text-academic-text">
+                The companion page follows the manuscript and uses the original figures from the paper. The central idea is to replace direct three-dimensional simulation of a finite-thickness lattice-skin structure with an equivalent plate or shell model while preserving the physically meaningful membrane, bending, and coupling responses captured by the ABD stiffness matrix.
+            </p>
+
+            <div class="space-y-8">
+                <figure class="border border-slate-200 rounded-lg bg-white p-4 shadow-sm">
+                    <img src="ThinHomogenization_files/fig0.jpg" alt="Overview of the open-source LPS-H analysis framework" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 1. Open-source LPS-H analysis framework for Lattice-skin Plate Structures. (a,b) Typical applications of Lattice-skin Plate Structures in aerospace fields such as aircraft wings and missile shells. (c) Lightweight Lattice-skin Plate Structures with multiple configurations. (d) Definition of the plate/shell ABD stiffness matrix. (e) Comparison of LPS-H and LVS-H in the prediction of macroscopic effective stiffness.
+                    </figcaption>
+                </figure>
+
+                <figure class="border border-slate-200 rounded-lg bg-white p-4 shadow-sm">
+                    <img src="ThinHomogenization_files/fig1.jpg" alt="Equivalent plate shell characterization and ABD matrix" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 2. Equivalent plate/shell mechanical characterization of Lattice-skin Plate Structures and schematic illustration of the ABD stiffness matrix. (a) Dimensional reduction from a Lattice-skin Plate Structure to an equivalent homogeneous plate/shell. (b) Composition and definition of the ABD stiffness matrix. (c) Six basic loading forms used to extract the effective stiffness components. (d-f) Physical meanings of the stiffness components in the A, B, and D matrices.
+                    </figcaption>
+                </figure>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border border-slate-200 rounded-lg bg-slate-50 p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="ph-bold ph-bounding-box text-academic-blue text-2xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-academic-heading">Plate and shell reduction</h3>
+                                <p class="mt-2 text-sm text-slate-600">
+                                    The method targets finite-thickness lattice-skin structures whose mechanical behavior is more faithfully described by equivalent plate and shell kinematics than by volume-only periodic homogenization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg bg-slate-50 p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="ph-bold ph-grid-four text-academic-blue text-2xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-academic-heading">Loop-free tensor mapping</h3>
+                                <p class="mt-2 text-sm text-slate-600">
+                                    The implementation relies on multidimensional tensor slicing to construct local-to-global mappings efficiently and keep the core homogenization routine compact.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-slate-200 rounded-lg bg-slate-50 p-5">
+                        <div class="flex items-start gap-3">
+                            <i class="ph-bold ph-cpu text-academic-blue text-2xl mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold text-academic-heading">Reusable computation pipeline</h3>
+                                <p class="mt-2 text-sm text-slate-600">
+                                    The same framework supports stiffness extraction, multiphase material settings, and steady-state heat conduction analysis in a consistent open-source workflow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <figure class="border border-slate-200 rounded-lg bg-white p-4 shadow-sm">
+                    <img src="ThinHomogenization_files/fig2.jpg" alt="Loop-free assembly logic for edofMat" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 3. Schematic of the loop-free assembly logic for the local-to-global DOF mapping tensor <code>edofMat</code> based on multidimensional tensor slicing.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="code">
+            <h2 class="section-heading">Code</h2>
+            <p class="mb-4 text-academic-text">
+                The manuscript provides a compact 99-line implementation. The following excerpt highlights the stress recovery and ABD extraction routine, where <code>np.einsum</code> is used to avoid explicit loops over tensor contractions.
+            </p>
+
+            <div class="rounded-lg shadow-sm overflow-hidden border border-slate-200">
+                <div class="bg-slate-100 border-b border-slate-200 px-4 py-2 flex items-center justify-between">
+                    <span class="text-xs font-mono text-slate-500">lps_homogenization.py</span>
+                    <a href="https://github.com/TopJournals/Thin_Walled_Homogenization" class="text-xs text-academic-blue hover:underline font-medium">View Full Source</a>
+                </div>
+<pre class="!m-0 !text-sm"><code class="language-python"># Core computation: microscopic stress recovery and effective ABD extraction
+ABD = np.zeros((6, 6))
+
+# Accumulate over the eight hexahedral Gauss points
+for i_gp in range(8):
+    # Physical stress recovery: Sigma = C * (E_macro - B * U)
+    Sigma = np.einsum('ij,kjl->kil', C, E_macro -
+            np.einsum('ij,kjl->kil', Bs[i_gp], U[edofMat, :]))
+
+    # Zeroth-order in-plane integration for the A and B matrices
+    ABD[0:3, :] += np.sum(Sigma[:, [0, 1, 5], :], axis=0) * detJ / plate_area
+
+    # First-order integration through the thickness for the D matrix
+    ABD[3:6, :] += np.sum(
+        Sigma[:, [0, 1, 5], :] * z_active[:, None, None],
+        axis=0
+    ) * detJ / plate_area
+
+# Symmetrization to satisfy Maxwell-Betti reciprocity
+ABD = (ABD + ABD.T) / 2.0
+return ABD
+</code></pre>
+            </div>
+        </section>
+
+        <section id="results">
+            <h2 class="section-heading">Results</h2>
+            <p class="mb-6 text-academic-text">
+                The paper validates the framework with representative thin-walled metamaterial cases, including TPMS and BCC sandwich structures, thickness size effects, multimaterial settings, and static-response comparisons against full-scale finite element models.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <figure class="border border-slate-200 p-4 rounded-lg bg-white">
+                    <img src="ThinHomogenization_files/fig_model.jpg" alt="Four analysis cases" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 4. Schematic illustration of the four analysis cases. (a) TPMS sandwich structure without skins. (b) TPMS sandwich structure with skins. (c) BCC sandwich structure without skins. (d) BCC sandwich structure with skins.
+                    </figcaption>
+                </figure>
+
+                <figure class="border border-slate-200 p-4 rounded-lg bg-white">
+                    <img src="ThinHomogenization_files/fig_convergence.jpg" alt="Mesh convergence analysis" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 5. Mesh convergence analysis of the sheet-type Primitive structure. (a) Evolution of the in-plane membrane stiffness A11 with respect to the resolution N. (b) Evolution of the bending stiffness D11 with respect to the resolution N.
+                    </figcaption>
+                </figure>
+
+                <figure class="border border-slate-200 p-4 rounded-lg bg-white">
+                    <img src="ThinHomogenization_files/fig_r1sheet.jpg" alt="Comparison between LVS-H and LPS-H on sheet-type TPMS structures" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 6. Heat-map comparison of effective ABD stiffness predictions from LVS-H and LPS-H for sheet-type TPMS structures, together with the corresponding relative-error distributions.
+                    </figcaption>
+                </figure>
+
+                <figure class="border border-slate-200 p-4 rounded-lg bg-white">
+                    <img src="ThinHomogenization_files/fig_rsize.jpg" alt="Thickness size-effect analysis of the Gyroid structure" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 7. Thickness size-effect analysis of the sheet-type Gyroid structure. (a) Schematic of the geometric evolution as the number of layers through the thickness, Nz, increases. (b) Convergence curves of the normalized in-plane membrane stiffness Aij versus Nz. (c) Convergence curves of the normalized bending stiffness Dij versus Nz.
+                    </figcaption>
+                </figure>
+
+                <figure class="border border-slate-200 p-4 rounded-lg bg-white">
+                    <img src="ThinHomogenization_files/fig_multimaterial.jpg" alt="Bimaterial laminated metamaterial plate shell" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 8. Schematic of a bimaterial laminated metamaterial plate/shell.
+                    </figcaption>
+                </figure>
+
+                <figure class="border border-slate-200 p-4 rounded-lg bg-white">
+                    <img src="ThinHomogenization_files/fig_app.jpg" alt="Static response comparison of full-scale model, LPS-H, and LVS-H" class="w-full rounded">
+                    <figcaption class="mt-3 text-sm text-slate-600">
+                        Figure 9. Comparison of the static responses predicted by the full-scale finite element model, LPS-H, and LVS-H. All three models use the same boundary conditions, with the upper boundary fixed and a 1 mm displacement load applied to the lower boundary, and the support reaction is used to characterize the overall stiffness.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="citation" class="pb-12">
+            <h2 class="section-heading">Citation</h2>
+            <p class="mb-4 text-academic-text">
+                If this code or the homogenization framework is useful in your research, please consider citing the paper.
+            </p>
+            <div class="bibtex-block">@article{ji202699line,
+  title={A 99-Line Homogenization Code for Lattice-skin Plate Structures},
+  author={Ji, Zhongkai and Li, Dawei and Zhao, Yong and Liao, Wenhe},
+  journal={arXiv preprint arXiv:2604.23181},
+  year={2026},
+  url={https://arxiv.org/abs/2604.23181}
+}</div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+            <div class="mb-4 md:mb-0">
+                &copy; 2026 LPS-H Project. Shanghai Jiao Tong University and Nanjing University of Science and Technology.
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://github.com/TopJournals/Thin_Walled_Homogenization" class="hover:text-academic-blue transition-colors flex items-center">
+                    <i class="ph-fill ph-github-logo text-xl mr-1"></i> Source Code
+                </a>
+                <a href="https://arxiv.org/abs/2604.23181" class="hover:text-academic-blue transition-colors flex items-center">
+                    <i class="ph-fill ph-file-pdf text-xl mr-1"></i> Paper Preprint
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

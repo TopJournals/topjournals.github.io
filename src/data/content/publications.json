@@ -1,0 +1,842 @@
+[
+  {
+    "year": 2026,
+    "title": "A 99 Line Homogenization Code for Lattice-skin Plate Structures",
+    "authors": "Zhongkai Ji, Dawei Li*, Yong Zhao*, Wenhe Liao",
+    "venue": "Educational Paper, Under Review, 2026",
+    "tags": [
+      "Homogenization",
+      "Lattice-skin",
+      "Open source"
+    ],
+    "paperUrl": "https://arxiv.org/abs/2604.23181",
+    "status": "Under Review",
+    "featured": true,
+    "highlyCited": false
+  },
+  {
+    "year": 2026,
+    "authors": "Ruijiang Fan, Wenhe Liao*, Dawei Li*, Tingting Liu, Kan Zheng",
+    "title": "Stealth Satellite Shape Design via a Hybrid AI-Driven Optimization Framework Enabling Tunable RCS",
+    "venue": "Chinese Journal of Aeronautics, Revise, 2026",
+    "tags": [
+      "AI-driven design",
+      "Satellite",
+      "RCS"
+    ],
+    "status": "Revise",
+    "featured": false,
+    "highlyCited": false,
+    "paperUrl": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Zhongkai Ji, Dawei Li*, Yong Zhao*, Wenhe Liao, Weiping Li, Yi Min Xie",
+    "title": "Data-driven for the hierarchical gradient design of metastructures with strong electromagnetic absorption",
+    "venue": "Science China Technological Sciences, Accepted, 2026",
+    "tags": [
+      "Data-driven design",
+      "Gradient metastructure",
+      "EM absorption"
+    ],
+    "status": "Accepted",
+    "featured": true,
+    "highlyCited": false,
+    "paperUrl": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Zhi Qu, Wenhe Liao*, Dawei Li, Tingting Liu, Zhongkai Ji, Junming Zhao",
+    "title": "Lightweight Conformal Design of Optically Transparent and Broadband Microwave Absorbing Metamaterial",
+    "venue": "Advanced Composites and Hybrid Materials, Accepted, 2026",
+    "tags": [
+      "Transparent absorber",
+      "Broadband absorption",
+      "Metamaterial"
+    ],
+    "status": "Accepted",
+    "featured": true,
+    "highlyCited": false,
+    "paperUrl": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Chengtao Sun, Dawei Li*, Wenhe Liao, Tingting Liu, Changdong Zhang, Yingzhi Xiong",
+    "title": "High-Load-Bearing and Ultra-Wideband Absorbing Reconfigurable Miura-ori Metastructures",
+    "venue": "Composites Science and Technology, 2026",
+    "tags": [
+      "Miura-ori",
+      "Reconfigurable",
+      "Load bearing"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.compscitech.2026.111658",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Zhongkai Ji, Dawei Li*, Wenhe Liao, Xiaoya Zhai, Jie Gao, Yunlong Tang, Ning Dai, Yong Zhao*, Yi Min Xie*",
+    "title": "Designing Anisotropic Mechanical Metamaterials and Metastructures: A Review",
+    "venue": "Thin-Walled Structures, 2026, 114719",
+    "tags": [
+      "Review",
+      "Anisotropy",
+      "Mechanical metamaterials"
+    ],
+    "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0263823126002430#fig0014",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Sen Zhang, Qing An, Dawei Li, Ke Chen, Junming Zhao*, Tian Jiang*, Wenhe Liao, Tingting Liu, Yijun Feng",
+    "title": "Low-RCS Coding Metasurface Utilizing 3-D Printed ABS Shells and Carbonyl Iron Powder/Polyimide Composite Patches via Hybrid Mechanisms",
+    "venue": "Materials Horizons, 2026",
+    "tags": [
+      "Coding metasurface",
+      "Low RCS",
+      "Composites"
+    ],
+    "paperUrl": "https://doi.org/10.1039/D6MH00199H",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Qing An, Sen Zhang, Dawei Li*, Wenhe Liao*, Tingting Liu, Weiping Li, Junming Zhao",
+    "title": "Insights for Improving the Additive Manufacturing Fabrication Accuracy of Electromagnetic Wave-absorbing Metastructure with Dipping Process",
+    "venue": "Additive Manufacturing Frontiers, 2026",
+    "tags": [
+      "Additive manufacturing",
+      "Dipping process",
+      "EM absorption"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.amf.2026.200322",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2026,
+    "authors": "Cong Ai, Changdong Zhang*, Kanghui Song, Xinze Shen, Dawei Li, Wenhe Liao, Tingting Liu*",
+    "title": "Design of conformal gradient heterogeneous lattices via bidirectional isoparametric mapping",
+    "venue": "International Journal of Mechanical Sciences, 2026, 311:111176",
+    "tags": [
+      "Conformal lattice",
+      "Gradient design",
+      "Mapping"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111176",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2026,
+    "authors": "Qing An, Wenhe Liao*, Dawei Li, Tingting Liu, Weiping Li, Sen Zhang, Junming Zhao",
+    "title": "Study on the Influence Mechanism of Electromagnetic Absorbing Metastructure Anisotropy on RCS",
+    "venue": "Acta Physica Sinica, 2026, 75(2): 020803",
+    "tags": [
+      "Anisotropy",
+      "RCS",
+      "EM absorption"
+    ],
+    "status": "Published",
+    "paperUrl": "https://wulixb.iphy.ac.cn/cn/article/doi/10.7498/aps.75.20251200",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2026,
+    "authors": "Xinze Shen#, Changdong Zhang#*, Wenhe Liao*, Dawei Li, Tingting Liu",
+    "title": "Configuration-decoupled concurrent topology optimization of heterogeneous lattice structures",
+    "venue": "Computer Methods in Applied Mechanics and Engineering, 2026, 448:118405",
+    "tags": [
+      "Topology optimization",
+      "Heterogeneous lattice",
+      "Concurrent design"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.cma.2025.118405",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Chengtao Sun#, Dawei Li#, Wenhe Liao*, Tingting Liu",
+    "title": "Rigid-Flexible Interlocked Metastructures Enable Conformal Stealth",
+    "venue": "Science Advances, 2025",
+    "tags": [
+      "Conformal stealth",
+      "Interlocked metastructure",
+      "Broadband absorption"
+    ],
+    "paperUrl": "https://www.science.org/doi/10.1126/sciadv.aeb7870",
+    "featured": true,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2025,
+    "authors": "Gang Wang#, Dawei Li#, Wenhe Liao*, Tingting Liu",
+    "title": "Agile Stealth: Bioinspired Metamaterials with Continuous Dynamic Tuning",
+    "venue": "Advanced Materials, 2025, e11070",
+    "tags": [
+      "Bioinspired",
+      "Dynamic tuning",
+      "Stealth"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1002/adma.202511070",
+    "featured": true,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Qing An, Dawei Li*, Wenhe Liao*, Tingting Liu, Weiping Li",
+    "title": "Lightweight Electromagnetic Wave-Absorbing Metastructures: Advances in 3D Printing-Based Design and Manufacturing",
+    "venue": "Advanced Materials Technologies, 2025",
+    "tags": [
+      "Review",
+      "3D printing",
+      "EM absorption"
+    ],
+    "paperUrl": "https://doi.org/10.1002/admt.202500581",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2025,
+    "authors": "Tengteng Tang, Prem Kalpesh Nawab, Parimal Prabhudesai, Saleh Alfarhan, Ivan Pesqueira, Kalyn VanWormer, Jingxing Li, Dawei Li, Kailong Jin, Xiangjia Li*",
+    "title": "Sustainable vat photopolymerization of complex functional structures with fast dissolvable and recyclable supports",
+    "venue": "Virtual and Physical Prototyping, 2025, 20(1): 2499452",
+    "tags": [
+      "Vat photopolymerization",
+      "Supports",
+      "Sustainability"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1080/17452759.2025.2499452",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Sen Zhang, Qing An, Dawei Li, Ke Chen, Junming Zhao*, Tian Jiang*, Ping Chen, Wenhe Liao, Tingting Liu, Yijun Feng",
+    "title": "Multifunctional Meta-absorber Based on CB-PLA Composite and Magnetic Materials for Electromagnetic Absorption and Load-bearing Capacity",
+    "venue": "Composites Science and Technology, 2025, 111131",
+    "tags": [
+      "Meta-absorber",
+      "CB-PLA",
+      "Load bearing"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.compscitech.2025.111131",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2025,
+    "authors": "Kanghui Song, Wenhe Liao, Dawei Li, Xudong Li, Zhengdong Yang, Changdong Zhang*, Tingting Liu*",
+    "title": "Multi-resolution 3D heteroelement structure optimization inspired by glass sponge",
+    "venue": "Engineering Structures, 2025, 328: 119666",
+    "tags": [
+      "Multi-resolution",
+      "Bio-inspired",
+      "Optimization"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.engstruct.2025.119666",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Zhongkai Ji#, Dawei Li#*, Yi Min Xie, Yong Zhao*, Wenhe Liao",
+    "title": "Design and Optimization of TPMS-based Heterogeneous Metastructure for Controllable Displacement Field",
+    "venue": "Thin-Walled Structures, 2025, 208: 112784",
+    "tags": [
+      "TPMS",
+      "Mechanical cloaking",
+      "Optimization"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.tws.2024.112784",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Yanheng Lin, Xiaoming Wang, Zhuoheng Liang, Dawei Li, Tingting Liu, Wenhe Liao, Changdong Zhang*",
+    "title": "Optimization Design of Multi-Scale TPMS Lattices Based on Geometric Continuity Fusion and Strain Energy Driven",
+    "venue": "Composite Structures, 2025, 354: 118759",
+    "tags": [
+      "TPMS",
+      "Multi-scale",
+      "Strain energy"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.compstruct.2024.118759",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Qing An#, Dawei Li#*, Wenhe Liao*, Tingting Liu, Zhi Qu, Gang Wang, Xiangjia Li",
+    "title": "Electromagnetic Absorption Mechanism of TPMS-Based Metastructures: Synergy Between Materials and Structures",
+    "venue": "Advanced Functional Materials, 2025, 35(5): 2414629",
+    "tags": [
+      "TPMS",
+      "Absorption mechanism",
+      "Materials-structure synergy"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1002/adfm.202414629",
+    "featured": true,
+    "highlyCited": false
+  },
+  {
+    "year": 2025,
+    "authors": "Cong Wang, Changdong Zhang*, Dawei Li*, Tingting Liu, Wenhe Liao",
+    "title": "Improving the natural frequency of the CubeSat structure using voxel-based topology optimization method with the four-connected seed filling",
+    "venue": "Mechanics Based Design of Structures and Machines, 2025, 53(2): 1031-1044",
+    "tags": [
+      "CubeSat",
+      "Topology optimization",
+      "Natural frequency"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1080/15397734.2024.2381697",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2024,
+    "authors": "Ruijang Fan#, Dawei Li#, Wenhe Liao*, Tingting Liu, Xiangjia Li, Tengteng Tang, Junming Zhao, Tian Jiang",
+    "title": "A Pattern Design Strategy for Microwave-absorbing Coding Metamaterials with Tortuosity and Connectivity",
+    "venue": "Composites Part B: Engineering, 2024, 287: 111880",
+    "tags": [
+      "Coding metamaterials",
+      "Microwave absorption",
+      "Tortuosity"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.compositesb.2024.111880",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2024,
+    "authors": "Gang Wang#, Dawei Li#*, Wenhe Liao*, Tingting Liu, Xiangjia Li, Qing An, Zhi Qu",
+    "title": "Multifunctional Metamaterial with Reconfigurable Electromagnetic Scattering Properties for Advanced Stealth and Adaptive Applications",
+    "venue": "Advanced Materials, 2024, 36(40): 2408216",
+    "tags": [
+      "Reconfigurable",
+      "Electromagnetic scattering",
+      "Stealth"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1002/adma.202408216",
+    "featured": true,
+    "highlyCited": false
+  },
+  {
+    "year": 2024,
+    "authors": "Chengtao Sun#, Dawei Li#*, Tingting Liu, Qing An, Changdong Zhang, Yaoyao Li, Wenhe Liao*",
+    "title": "Design of Functionally Gradient Metastructure with Ultra-broadband and Strong Absorption",
+    "venue": "Composites Part B: Engineering, 2024, 280: 111484",
+    "tags": [
+      "Gradient metastructure",
+      "Ultra-broadband",
+      "Absorption"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.compositesb.2024.111484",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2024,
+    "authors": "Zhongkai Ji#, Dawei Li#*, Changdong Zhang, Yi Min Xie, Wenhe Liao",
+    "title": "AI-aided design and multi-scale optimization of mechanical metastructures with controllable anisotropy",
+    "venue": "Engineering Structures, 2024, 310: 118134",
+    "tags": [
+      "AI-aided design",
+      "Multi-scale",
+      "Anisotropy"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1016/j.engstruct.2024.118134",
+    "featured": true,
+    "highlyCited": false
+  },
+  {
+    "year": 2023,
+    "authors": "Gang Wang#, Dawei Li#*, Tingting Liu, Changdong Zhang, Yi Min Xie, Wenhe Liao*",
+    "title": "Design and manufacturing of lightweight modular broadband microwave absorbing metastructure",
+    "venue": "Composites Part B: Engineering, 2023, 266: 111007",
+    "tags": [
+      "Modular metastructure",
+      "Broadband absorption",
+      "Lightweight"
+    ],
+    "status": "Published",
+    "paperUrl": "https://www.sciencedirect.com/science/article/pii/S1359836823005103",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2023,
+    "authors": "Xinze Shen, Changdong Zhang, Xiuyi Jia, Dawei Li, Tingting Liu*, Sukun Tian, Wei Wei, Yuchun Sun*, Wenhe Liao*",
+    "title": "TranSDFNet: Transformer-Based Truncated Signed Distance Fields for The Shape Design of Removable Partial Denture Clasps",
+    "venue": "IEEE Journal of Biomedical and Health Informatics, 2023, 27(10): 4950-4960",
+    "tags": [
+      "Transformer",
+      "Signed distance field",
+      "Biomedical design"
+    ],
+    "status": "Published",
+    "paperUrl": "https://ieeexplore.ieee.org/document/10188897",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2023,
+    "authors": "Qing An#, Dawei Li#*, Wenhe Liao*, Tingting Liu, Dylan Joralmon, Xiangjia Li, Junming Zhao",
+    "title": "A Novel Ultra-wideband Electromagnetic Wave-absorbing Metastructure Inspired by Bionic Gyroid Structures",
+    "venue": "Advanced Materials, 2023, 35(26): 2300659",
+    "tags": [
+      "Bionic gyroid",
+      "Ultra-wideband",
+      "EM absorption"
+    ],
+    "status": "Published",
+    "paperUrl": "https://doi.org/10.1002/adma.202300659",
+    "featured": true,
+    "highlyCited": true
+  },
+  {
+    "year": 2023,
+    "authors": "Kanghui Song#, Dawei Li#*, Changdong Zhang, Tingting Liu, Yunlong Tang, Yi Min Xie, Wenhe Liao*",
+    "title": "Bio-inspired hierarchical honeycomb metastructures with superior mechanical properties",
+    "venue": "Composite Structures, 2023, 304: 116452",
+    "tags": [
+      "Bio-inspired",
+      "Honeycomb",
+      "Mechanical properties"
+    ],
+    "status": "Published",
+    "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0263822322011849",
+    "featured": false,
+    "highlyCited": false
+  },
+  {
+    "year": 2022,
+    "authors": "Zhongkai Ji#, Dawei Li#*, Wenhe Liao, Yi Min Xie",
+    "title": "AI-aided design of multiscale lattice metastructures for controllable anisotropy",
+    "venue": "Materials & Design, 2022, 223: 111254",
+    "tags": [
+      "AI-aided design",
+      "Lattice",
+      "Anisotropy"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.matdes.2022.111254",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2022,
+    "authors": "Kanghui Song#, Dawei Li#, Tingting Liu, Changdong Zhang*, Yi Min Xie, Wenhe Liao*",
+    "title": "Crystal-twinning inspired lattice metamaterial for high stiffness, strength, and toughness",
+    "venue": "Materials & Design, 2022, 221: 110916",
+    "tags": [
+      "Crystal twinning",
+      "Lattice metamaterial",
+      "Toughness"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.matdes.2022.110916",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2022,
+    "authors": "Rui Dai#, Dawei Li#, Wenhe Liao, Haofan Sun, Yunlong Tang, Qiong Nian*",
+    "title": "Molecular dynamics simulations to understand the mechanical behavior of functional gradient nano-gyroid structures",
+    "venue": "Journal of Applied Physics, 2022, 132(13): 135109",
+    "tags": [
+      "Molecular dynamics",
+      "Nano-gyroid",
+      "Functional gradient"
+    ],
+    "paperUrl": "https://pubs.aip.org/aip/jap/article/132/13/135109/2837642/Molecular-dynamics-simulations-to-understand-the",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2022,
+    "authors": "Haobin Hu, Wenhe Liao, Tingting Liu, Qing An, Liming Hou, Xiang Zhang, Dawei Li",
+    "title": "Dual-polarized Frequency-selective Rasorbers with Two Transmission Bands",
+    "venue": "2022 IEEE 5th International Conference on Electronics Technology, 2022: 896-900",
+    "tags": [
+      "Rasorber",
+      "Frequency selective",
+      "Electronics"
+    ],
+    "paperUrl": "https://ieeexplore.ieee.org/abstract/document/9824912",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2022,
+    "authors": "Tingting Liu, Zuoheng Liang, Fangxi Ren, Wenhe Liao, Changdong Zhang, Dawei Li",
+    "title": "Design of Lightweight Multi-Lattice Structure and Mechanical Property Analysis of Transition Boundaries",
+    "venue": "Aeronautical Manufacturing Technology, 2022, 65(14): 110-117",
+    "tags": [
+      "Multi-lattice",
+      "Transition boundary",
+      "Mechanical properties"
+    ],
+    "paperUrl": "http://www.amte.net.cn/CN/abstract/abstract5310.shtml",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2021,
+    "authors": "Fangxi Ren, Changdong Zhang*, Wenhe Liao, Tingting Liu, Dawei Li, Xin Shi, Weiming Jiang, Cong Wang, Junfeng Qi, Yi Chen, Zhen Wang",
+    "title": "Transition boundaries and stiffness optimal design for multi-TPMS lattices",
+    "venue": "Materials & Design, 2021, 210: 110062",
+    "tags": [
+      "Multi-TPMS",
+      "Transition boundary",
+      "Stiffness design"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.matdes.2021.110062",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2021,
+    "authors": "Xin Shi, Wenhe Liao*, Tingting Liu*, Changdong Zhang, Dawei Li, Weiming Jiang, Cong Wang, Fangxi Ren",
+    "title": "Design optimization of multimorphology surface-based lattice structures with density gradients",
+    "venue": "The International Journal of Advanced Manufacturing Technology, 2021, 117(7): 2013-2028",
+    "tags": [
+      "Surface-based lattice",
+      "Density gradient",
+      "Optimization"
+    ],
+    "paperUrl": "https://doi.org/10.1007/s00170-021-07175-3",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2020,
+    "authors": "Dawei Li, Wenhe Liao, Ning Dai*, Yi Min Xie",
+    "title": "Anisotropic design and optimization of conformal gradient lattice structures",
+    "venue": "Computer-Aided Design, 2020, 119: 102787",
+    "tags": [
+      "Anisotropy",
+      "Conformal gradient",
+      "Lattice"
+    ],
+    "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0010448519302386",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2020,
+    "authors": "Zhenyang Gao, Dawei Li, Guoying Dong, Yaoyao Fiona Zhao*",
+    "title": "Crack path-engineered 2D octet-truss lattice with bio-inspired crack deflection",
+    "venue": "Additive Manufacturing, 2020, 36: 101539",
+    "tags": [
+      "Octet truss",
+      "Crack deflection",
+      "Additive manufacturing"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.addma.2020.101539",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2020,
+    "authors": "Guoying Dong, Yunlong Tang, Dawei Li, Yaoyao Fiona Zhao*",
+    "title": "Design and optimization of solid lattice hybrid structures fabricated by additive manufacturing",
+    "venue": "Additive Manufacturing, 2020, 33: 101116",
+    "tags": [
+      "Hybrid structures",
+      "Solid lattice",
+      "Additive manufacturing"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.addma.2020.101116",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2020,
+    "authors": "Hao Liu*, Lei Liu, Dawei Li, Renkai Huang, Ning Dai",
+    "title": "An approach to partition workpiece CAD model towards 5-axis support-free 3D printing",
+    "venue": "The International Journal of Advanced Manufacturing Technology, 2020, 106(1): 683-699",
+    "tags": [
+      "CAD partition",
+      "5-axis printing",
+      "Support-free"
+    ],
+    "paperUrl": "https://doi.org/10.1007/s00170-019-04495-3",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2020,
+    "authors": "Xin Zhou, Ning Dai*, Mingqiang Chu, Lei Wang, Dawei Li, Lei Zhou, Xiaosheng Cheng",
+    "title": "X-ray CT analysis of the influence of process on defect in Ti-6Al-4V parts produced with Selective Laser Melting technology",
+    "venue": "The International Journal of Advanced Manufacturing Technology, 2020, 106(1): 3-14",
+    "tags": [
+      "X-ray CT",
+      "Selective laser melting",
+      "Defects"
+    ],
+    "paperUrl": "https://doi.org/10.1007/s00170-019-04347-0",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2020,
+    "authors": "Xiaotong Jiang, Ning Dai, Changdong Zhang, Baosu Guo, Dawei Li, Changwen Li",
+    "title": "A Semi-Automatic Precise Tooth Segmentation Algorithm of Dental Model",
+    "venue": "Journal of Computer-Aided Design & Computer Graphics, 2020, 32(5): 820-829",
+    "tags": [
+      "Segmentation",
+      "Dental model",
+      "CAD"
+    ],
+    "paperUrl": "https://www.jcad.cn/cn/article/doi/10.3724/SP.J.1089.2020.17870",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2019,
+    "authors": "Dawei Li, Wenhe Liao, Ning Dai*, Yi Min Xie",
+    "title": "Comparison of Mechanical Properties and Energy Absorption of Sheet-based and Strut-based Gyroid Cellular Structures with Graded Densities",
+    "venue": "Materials, 2019, 12(13): 2183",
+    "tags": [
+      "Gyroid",
+      "Energy absorption",
+      "Graded density"
+    ],
+    "paperUrl": "https://www.mdpi.com/1996-1944/12/13/2183",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2019,
+    "authors": "Dawei Li, Ning Dai*, Yunlong Tang, Guoying Dong, Yaoyao Fiona Zhao*",
+    "title": "Design and Optimization of Graded Cellular Structures with Triply Periodic Level Surface-based Topological Shapes",
+    "venue": "Journal of Mechanical Design, 2019: 1-18",
+    "tags": [
+      "Cellular structures",
+      "TPMS",
+      "Optimization"
+    ],
+    "paperUrl": "https://asmedigitalcollection.asme.org/mechanicaldesign/article/141/7/071402/727182/Design-and-Optimization-of-Graded-Cellular",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2019,
+    "authors": "Jinqiang Wang, Xiaosheng Chen, Ning Dai*, Dawei Li, Xin Zhou, Yunlong Tang",
+    "title": "Programmable Shape-shifting from Planar Sheets to Curved Geometries via Front Photopolymerization Approach",
+    "venue": "Journal of Mechanical Engineering, 2019, 55(13): 175-184,194",
+    "tags": [
+      "Shape-shifting",
+      "Photopolymerization",
+      "Programmable structures"
+    ],
+    "paperUrl": "http://www.cjmenet.com.cn/CN/10.3901/JME.2019.13.175",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2019,
+    "authors": "Longwei Ding, Ning Dai*, Xiaoming Mu, Shaohui Xie, Xu Fan, Dawei Li, Xiaosheng Cheng",
+    "title": "Design of soft multi-material pneumatic actuators based on principal strain field",
+    "venue": "Materials & Design, 2019, 182: 108000",
+    "tags": [
+      "Soft actuator",
+      "Multi-material",
+      "Principal strain"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.matdes.2019.108000",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2019,
+    "authors": "Jinqiang Wang, Xiaoming Mu, Dawei Li, Changjiang Yu, Xiaosheng Cheng, Ning Dai*",
+    "title": "Modeling and Application of Planar-to-3D Structures via Optically Programmed Frontal Photopolymerization",
+    "venue": "Advanced Engineering Materials, 2019, 21(5): 1801279",
+    "tags": [
+      "Planar-to-3D",
+      "Photopolymerization",
+      "Modeling"
+    ],
+    "paperUrl": "https://doi.org/10.1002/adem.201801279",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2019,
+    "authors": "Wei Chen, Ning Dai*, Jinqiang Wang, Hao Liu, Dawei Li, Lele Liu",
+    "title": "Personalized design of functional gradient bone tissue engineering scaffold",
+    "venue": "Journal of Biomechanical Engineering, 2019, 141(11)",
+    "tags": [
+      "Bone scaffold",
+      "Functional gradient",
+      "Biomechanics"
+    ],
+    "paperUrl": "https://doi.org/10.1115/1.4043559",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2018,
+    "authors": "Dawei Li, Wenhe Liao, Ning Dai*, Guoying Dong, Yunlong Tang, Yi Min Xie",
+    "title": "Optimal design and modeling of gyroid-based functionally graded cellular structures for additive manufacturing",
+    "venue": "Computer-Aided Design, 2018, 104: 87-99",
+    "tags": [
+      "Gyroid",
+      "Functionally graded",
+      "Additive manufacturing"
+    ],
+    "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0010448518300381",
+    "highlyCited": true,
+    "featured": false,
+    "status": ""
+  },
+  {
+    "year": 2018,
+    "authors": "Dawei Li, Ning Dai*, Xin Zhou, Renkai Huang, Wenhe Liao",
+    "title": "Self-supporting interior structures modeling for buoyancy optimization of computational fabrication",
+    "venue": "The International Journal of Advanced Manufacturing Technology, 2018, 95(1-4): 825-834",
+    "tags": [
+      "Self-supporting",
+      "Buoyancy optimization",
+      "Computational fabrication"
+    ],
+    "paperUrl": "https://doi.org/10.1007/s00170-017-1261-6",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2018,
+    "authors": "Renkai Huang, Ning Dai*, Dawei Li, Xiaosheng Cheng, Hao Liu, Dengguang Sun",
+    "title": "Parallel non-dominated sorting genetic algorithm-II for optimal part deposition orientation in additive manufacturing based on functional features",
+    "venue": "Proceedings of the Institution of Mechanical Engineers, Part C, 2018, 232(19): 3384-3395",
+    "tags": [
+      "Genetic algorithm",
+      "Deposition orientation",
+      "Additive manufacturing"
+    ],
+    "paperUrl": "https://doi.org/10.1177/0954406217737105",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2018,
+    "authors": "Guoying Dong, Yunlong Tang, Dawei Li, Yaoyao Fiona Zhao*",
+    "title": "Mechanical properties of continuous kevlar fiber reinforced composites fabricated by fused deposition modeling process",
+    "venue": "Procedia Manufacturing, 2018, 26: 774-781",
+    "tags": [
+      "Kevlar fiber",
+      "FDM",
+      "Composites"
+    ],
+    "paperUrl": "https://doi.org/10.1016/j.promfg.2018.07.090",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2018,
+    "authors": "Xin Zhou, Ning Dai*, Dawei Li, Dengguang Sun, Jinqiang Wang, Xiaosheng Chen",
+    "title": "Optimization technology of DLP 3D printing process based on controllable strength of support",
+    "venue": "Computer Integrated Manufacturing Systems, 2018, 24(09):22-28",
+    "tags": [
+      "DLP printing",
+      "Support strength",
+      "Process optimization"
+    ],
+    "paperUrl": "http://www.cims-journal.cn/CN/10.13196/j.cims.2018.09.003",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2017,
+    "authors": "Ning Dai*, Dawei Li, Xu Yang, Cheng Cheng, Yuchun Sun",
+    "title": "Research and primary evaluation of an automatic fusion method for multisource tooth crown data",
+    "venue": "International Journal for Numerical Methods in Biomedical Engineering, 2017, 33(11): e2878",
+    "tags": [
+      "Data fusion",
+      "Tooth crown",
+      "Biomedical engineering"
+    ],
+    "paperUrl": "https://doi.org/10.1002/cnm.2878",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2016,
+    "authors": "Dawei Li, Ning Dai*, Xiaotong Jiang, Xiaosheng Chen",
+    "title": "Interior structural optimization based on the density-variable shape modeling of 3D printed objects",
+    "venue": "The International Journal of Advanced Manufacturing Technology, 2016, 83(9-12): 1627-1635",
+    "tags": [
+      "Interior structure",
+      "3D printing",
+      "Optimization"
+    ],
+    "paperUrl": "https://doi.org/10.1007/s00170-015-7704-z",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  },
+  {
+    "year": 2016,
+    "authors": "Dawei Li, Ning Dai*, Xiaotong Jiang, Yu Zhang, Xiaosheng Chen",
+    "title": "3D Parametric Modeling Technique of Bionic Sharkskin Denticle",
+    "venue": "Journal of Mechanical Engineering, 2016, 52(23): 182-188",
+    "tags": [
+      "Parametric modeling",
+      "Bionic sharkskin",
+      "3D design"
+    ],
+    "paperUrl": "http://www.cjmenet.com.cn/CN/10.3901/JME.2016.23.182",
+    "featured": false,
+    "highlyCited": false,
+    "status": ""
+  }
+]

@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsList from '../components/NewsList.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+import { site } from '../data/site';
+import { news } from '../data/news';
+import { publications } from '../data/publications';
+import { researchProjects } from '../data/research';
+import { highlightDaweiLi } from '../utils/highlightName';
+
+const featuredPapers = publications.filter((item) => item.featured).slice(0, 5);
+const featuredResearch = researchProjects.filter((item) => item.featured).slice(0, 3);
+const highlightedLeader = highlightDaweiLi(site.leader);
+---
+
+<BaseLayout title={site.title} description={site.description}>
+  <header class="border-b border-academic-border bg-white">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-20">
+      <section>
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-slate-600">
+          Metamaterials · Metastructures · AI-aided Design
+        </div>
+        <h1 class="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-academic-heading md:text-6xl">
+          Metastructure Lab
+        </h1>
+        <p class="mt-5 text-xl font-light text-slate-500">
+          We design architected materials and metastructures that connect mechanics, electromagnetic absorption, additive manufacturing, and computational intelligence.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/publications/" class="focus-ring rounded bg-academic-blue px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800">View Publications</a>
+          <a href="/research/" class="focus-ring rounded border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-academic-heading hover:bg-slate-50">Research Areas</a>
+        </div>
+      </section>
+      <aside class="hover-card rounded border border-slate-200 bg-slate-50 p-6 shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-academic-blue">Principal Investigator</p>
+        <h2 class="mt-2 text-2xl font-bold text-academic-heading"><span set:html={highlightedLeader} /> <span class="text-slate-400">{site.leaderChinese}</span></h2>
+        <p class="mt-2 text-slate-600">{site.affiliation}</p>
+        <div class="mt-5 space-y-2 text-sm text-slate-600">
+          <p><strong class="text-slate-700">Email:</strong> <a href={`mailto:${site.email}`} class="text-academic-blue hover:underline">{site.email}</a></p>
+          <p><strong class="text-slate-700">Address:</strong> {site.address}</p>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href={site.scholarUrl} target="_blank" rel="noreferrer" class="rounded border border-slate-300 bg-white px-3 py-2 text-sm font-medium hover:bg-slate-50">Google Scholar</a>
+          <a href={site.researchGateUrl} target="_blank" rel="noreferrer" class="rounded border border-slate-300 bg-white px-3 py-2 text-sm font-medium hover:bg-slate-50">ResearchGate</a>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section class="border-y border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+      <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h2 class="section-heading">Research Highlights</h2>
+        </div>
+        <a href="/research/" class="text-sm font-semibold text-academic-blue hover:underline">All research</a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        {featuredResearch.map((project) => <ResearchCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
+    <div>
+      <div class="mb-4 flex items-center justify-between gap-4">
+        <h2 class="section-heading mb-0">Selected Publications</h2>
+        <a href="/publications/" class="shrink-0 text-sm font-semibold text-academic-blue hover:underline">Full list</a>
+      </div>
+      <div>
+        {featuredPapers.map((publication) => <PublicationCard publication={publication} />)}
+      </div>
+    </div>
+    <aside>
+      <div class="mb-4 flex items-center justify-between gap-4">
+        <h2 class="section-heading mb-0">News</h2>
+        <a href="/news/" class="shrink-0 text-sm font-semibold text-academic-blue hover:underline">Archive</a>
+      </div>
+      <NewsList items={news.slice(0, 8)} />
+    </aside>
+  </section>
+</BaseLayout>

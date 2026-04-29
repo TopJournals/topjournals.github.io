@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Metastructure Lab",
+    "title": "Metastructure Lab | NJUST",
+    "description": "Academic website for research in metamaterial and metastructure design, AI-aided optimization, electromagnetic absorption, and multi-scale topology optimization.",
+    "url": "https://www.metastructure.tech/",
+    "leader": "Dawei Li",
+    "leaderChinese": "李大伟",
+    "affiliation": "School of Mechanical Engineering, Nanjing University of Science and Technology",
+    "address": "No.200 Xiaolingwei Street, Nanjing, Jiangsu Province",
+    "email": "ldw@njust.edu.cn",
+    "scholarUrl": "https://scholar.google.com/scholar?q=Dawei+Li+metastructure",
+    "researchGateUrl": "https://www.researchgate.net/search/researcher?q=Dawei%20Li%20metastructure",
+    "biography": [
+      "Dawei Li is currently an Associate Professor at Nanjing University of Science and Technology (NJUST), working with the Microsatellite Design and Integral Manufacturing team led by Prof. Wenhe Liao.",
+      "He received his PhD from Nanjing University of Aeronautics and Astronautics in 2019 under the supervision of Prof. Wenhe Liao, and visited the Additive Design and Manufacturing Lab led by Prof. Yaoyao Fiona Zhao at McGill University during 2017-2018.",
+      "The group focuses on innovative metamaterial and metastructure design, artificial intelligence-aided design, electromagnetic wave-absorbing structures, and multi-scale topology optimization."
+    ],
+    "professionalActivities": [
+      "Peer Reviewer: Nature Communication, Advanced Materials, Advanced Functional Materials, Additive Manufacturing, Composites Part B: Engineering, International Journal of Mechanical Sciences, Materials & Design, Computer-aided Design, Composite Structures, Laser & Photonics Reviews e.t..",
+      "Conference Program Committee: International Conference on Research Advances in Additive Manufacturing (RAAM 2023, 2024, 2025), IEEE CASE 2023.",
+      "Guest Editor: Metals (Special issue: Design and Fabrication of Lattice and Architectured Materials via Metal Additive Manufacturing, 2023)."
+    ]
+  }
+]
