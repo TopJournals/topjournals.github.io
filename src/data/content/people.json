@@ -2,81 +2,97 @@
   {
     "name": "Qing An",
     "role": "Ph.D. Candidate",
-    "start": "2020.9"
+    "start": "2020.9",
+    "avatar": "/assets/avatars/cats/qing-an.png"
   },
   {
     "name": "Cheng Chen",
     "role": "Ph.D. Candidate",
-    "start": "2021.9"
+    "start": "2021.9",
+    "avatar": "/assets/avatars/cats/cheng-chen.png"
   },
   {
     "name": "Ruijiang Fan",
     "role": "Ph.D. Candidate",
-    "start": "2022.9"
+    "start": "2022.9",
+    "avatar": "/assets/avatars/cats/ruijiang-fan.png"
   },
   {
     "name": "Gang Wang",
     "role": "Ph.D. Candidate",
-    "start": "2022.9"
+    "start": "2022.9",
+    "avatar": "/assets/avatars/cats/gang-wang.png"
   },
   {
     "name": "Zhi Qu",
     "role": "Ph.D. Candidate",
-    "start": "2022.9"
+    "start": "2022.9",
+    "avatar": "/assets/avatars/cats/zhi-qu.png"
   },
   {
     "name": "Yue Guan",
     "role": "Ph.D. Student",
-    "start": "2024.4"
+    "start": "2024.4",
+    "avatar": "/assets/avatars/cats/yue-guan.png"
   },
   {
     "name": "Chengtao Sun",
     "role": "Ph.D. Student",
-    "start": "2024.10"
+    "start": "2024.10",
+    "avatar": "/assets/avatars/cats/chengtao-sun.png"
   },
   {
     "name": "Weiping Li",
     "role": "Ph.D. Student",
-    "start": "2024.10"
+    "start": "2024.10",
+    "avatar": "/assets/avatars/cats/weiping-li.png"
   },
   {
     "name": "Zhongkai Ji",
     "role": "Ph.D. Student",
-    "start": "2025.3"
+    "start": "2025.3",
+    "avatar": "/assets/avatars/cats/zhongkai-ji.png"
   },
   {
     "name": "Yutong Huang",
     "role": "Ph.D. Student",
-    "start": "2025.11"
+    "start": "2025.11",
+    "avatar": "/assets/avatars/cats/yutong-huang.png"
   },
   {
     "name": "Yingzhi Xiong",
     "role": "Ph.D. Student",
-    "start": "2025.11"
+    "start": "2025.11",
+    "avatar": "/assets/avatars/cats/yingzhi-xiong.png"
   },
   {
     "name": "Yongtao Zhao",
     "role": "Postgraduate",
-    "start": "2024.9"
+    "start": "2024.9",
+    "avatar": "/assets/avatars/cats/yongtao-zhao.png"
   },
   {
     "name": "Hanwen Jiang",
     "role": "Postgraduate",
-    "start": "2025.9"
+    "start": "2025.9",
+    "avatar": "/assets/avatars/cats/hanwen-jiang.png"
   },
   {
     "name": "Xingwei Huang",
     "role": "Postgraduate",
-    "start": "2025.9"
+    "start": "2025.9",
+    "avatar": "/assets/avatars/cats/xingwei-huang.png"
   },
   {
     "name": "Wenxu Wang",
     "role": "Postgraduate",
-    "start": "2025.9"
+    "start": "2025.9",
+    "avatar": "/assets/avatars/cats/wenxu-wang.png"
   },
   {
     "name": "Tao Wang",
     "role": "Postgraduate",
-    "start": "2025.9"
+    "start": "2025.9",
+    "avatar": "/assets/avatars/cats/tao-wang.png"
   }
 ]
