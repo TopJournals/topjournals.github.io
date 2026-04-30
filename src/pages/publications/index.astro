@@ -2,10 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PublicationCard from '../../components/PublicationCard.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
-import { honors } from '../../data/honors';
 import { publicationTags, publicationYears, publications } from '../../data/publications';
 import { conferenceActivities } from '../../data/conference';
-import { patentRecords, softwareRecords } from '../../data/intellectualProperty';
 import { highlightDaweiLi } from '../../utils/highlightName';
 
 const highlightedConference = conferenceActivities.map((item) => ({
@@ -40,24 +38,6 @@ const highlightedConference = conferenceActivities.map((item) => ({
           {publicationTags.map((tag) => <option value={tag.toLowerCase()}>{tag}</option>)}
         </select>
       </label>
-    </div>
-
-    <div class="mb-10 grid gap-5 md:grid-cols-3">
-      <a href="/publications/patents/" class="hover-card block rounded border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="mb-2 inline-flex rounded bg-blue-50 px-2.5 py-1 text-xs font-semibold text-academic-blue">Publications</p>
-        <h3 class="text-xl font-bold text-academic-heading">Patents</h3>
-        <p class="mt-2 text-sm text-slate-600">{patentRecords.length} patents and related standards</p>
-      </a>
-      <a href="/publications/software/" class="hover-card block rounded border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="mb-2 inline-flex rounded bg-blue-50 px-2.5 py-1 text-xs font-semibold text-academic-blue">Publications</p>
-        <h3 class="text-xl font-bold text-academic-heading">Software Copyrights</h3>
-        <p class="mt-2 text-sm text-slate-600">{softwareRecords.length} software records</p>
-      </a>
-      <a href="/honors/" class="hover-card block rounded border border-slate-200 bg-white p-6 shadow-sm">
-        <p class="mb-2 inline-flex rounded bg-blue-50 px-2.5 py-1 text-xs font-semibold text-academic-blue">Publications</p>
-        <h3 class="text-xl font-bold text-academic-heading">Honors & Awards</h3>
-        <p class="mt-2 text-sm text-slate-600">{honors.length} honors and awards</p>
-      </a>
     </div>
 
     <p id="publication-count" class="mb-3 text-sm font-medium text-slate-500">{publications.length} publications</p>
