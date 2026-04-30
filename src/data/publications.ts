@@ -15,6 +15,9 @@ export type Publication = {
 const hasIssueOrArticleNumber = (venue: string) =>
   /,\s*\d+(?:\(\d+\))?:\s*[\w.-]+/.test(venue) || /,\s*e[\w.-]+/.test(venue);
 
+const hasDoi = (url?: string) =>
+  Boolean(url && (/\bdoi\.org\/10\.\d{4,9}\//i.test(url) || /\/doi\/10\.\d{4,9}\//i.test(url)));
+
 const inferStatus = (year: number, venue: string) => {
   if (/\bUnder Review\b/i.test(venue)) return 'Under Review';
   if (/\bRevise\b/i.test(venue)) return 'Revise';
@@ -27,8 +30,8 @@ const pub = (
   item: Publication
 ): Publication => ({
   ...item,
-  status: item.status ?? inferStatus(item.year, item.venue),
-  paperUrl: item.paperUrl?.trim() ? item.paperUrl : undefined
+  paperUrl: item.paperUrl?.trim() ? item.paperUrl : undefined,
+  status: hasDoi(item.paperUrl) ? 'Published' : item.status ?? inferStatus(item.year, item.venue)
 });
 
 export const publications: Publication[] = publicationsData.map((item) => pub(item as Publication));
