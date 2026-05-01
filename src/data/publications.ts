@@ -13,7 +13,7 @@ export type Publication = {
 };
 
 const hasIssueOrArticleNumber = (venue: string) =>
-  /,\s*\d+(?:\(\d+\))?:\s*[\w.-]+/.test(venue) || /,\s*e[\w.-]+/.test(venue);
+  /,\s*\d+(?:\(\d+\))?:\s*[\w.-]+/.test(venue) || /,\s*e[\w.-]+/.test(venue) || /,\s*\d{4,}\s*$/.test(venue);
 
 const hasDoi = (url?: string) =>
   Boolean(url && (/\bdoi\.org\/10\.\d{4,9}\//i.test(url) || /\/doi\/10\.\d{4,9}\//i.test(url)));
@@ -31,7 +31,7 @@ const pub = (
 ): Publication => ({
   ...item,
   paperUrl: item.paperUrl?.trim() ? item.paperUrl : undefined,
-  status: hasDoi(item.paperUrl) ? 'Published' : item.status ?? inferStatus(item.year, item.venue)
+  status: hasDoi(item.paperUrl) ? 'Published' : item.status || inferStatus(item.year, item.venue)
 });
 
 export const publications: Publication[] = publicationsData.map((item) => pub(item as Publication));
