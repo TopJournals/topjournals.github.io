@@ -344,34 +344,46 @@
           highlight: Boolean(item.highlight)
         })
       },
-      people: {
-        title: 'People',
-        description: 'Maintain student and researcher entries shown on the people page.',
-        singular: 'person',
-        fields: [
-          { key: 'name', label: 'Name', type: 'text' },
-          { key: 'role', label: 'Role', type: 'text' },
-          { key: 'start', label: 'Start', type: 'text' }
-        ],
-        makeEmpty: () => ({
-          name: '',
-          role: '',
-          start: ''
-        }),
-        toFormData: (item) => ({ ...item }),
-        fromFormData: (formData) => ({
-          name: formData.name.trim(),
-          role: formData.role.trim(),
-          start: formData.start.trim()
-        }),
-        summarize: (item) => `${item.name} · ${item.role}`,
-        normalize: (item) => ({
-          ...item,
-          name: item.name ?? '',
-          role: item.role ?? '',
-          start: item.start ?? ''
-        })
-      },
+       people: {
+         title: 'People',
+         description: 'Maintain student and researcher entries shown on the people page.',
+         singular: 'person',
+         fields: [
+           { key: 'name', label: 'Name', type: 'text' },
+           { key: 'role', label: 'Role', type: 'text' },
+           { key: 'start', label: 'Start', type: 'text' },
+           { key: 'avatar', label: 'Avatar Path', type: 'text', full: true },
+           { key: 'scholarUrl', label: 'Google Scholar URL', type: 'text', full: true },
+           { key: 'researchGateUrl', label: 'ResearchGate URL', type: 'text', full: true }
+         ],
+         makeEmpty: () => ({
+           name: '',
+           role: '',
+           start: '',
+           avatar: '',
+           scholarUrl: '',
+           researchGateUrl: ''
+         }),
+         toFormData: (item) => ({ ...item }),
+         fromFormData: (formData) => ({
+           name: formData.name.trim(),
+           role: formData.role.trim(),
+           start: formData.start.trim(),
+           avatar: formData.avatar.trim(),
+           scholarUrl: formData.scholarUrl.trim(),
+           researchGateUrl: formData.researchGateUrl.trim()
+         }),
+         summarize: (item) => `${item.name} · ${item.role}`,
+         normalize: (item) => ({
+           ...item,
+           name: item.name ?? '',
+           role: item.role ?? '',
+           start: item.start ?? '',
+           avatar: item.avatar ?? '',
+           scholarUrl: item.scholarUrl ?? '',
+           researchGateUrl: item.researchGateUrl ?? ''
+         })
+       },
       honors: {
         title: 'Honors',
         description: 'Update honors and awards shown across the site.',

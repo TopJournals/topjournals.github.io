@@ -5,6 +5,8 @@ export type Person = {
   role: string;
   start: string;
   avatar: string;
+  scholarUrl?: string;
+  researchGateUrl?: string;
 };
 
 export const people: Person[] = peopleData as Person[];

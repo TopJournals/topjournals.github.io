@@ -3,96 +3,128 @@
     "name": "Qing An",
     "role": "Ph.D. Candidate",
     "start": "2020.9",
-    "avatar": "/assets/avatars/cats/qing-an.png"
+    "avatar": "/assets/avatars/cats/qing-an.png",
+    "scholarUrl": "",
+    "researchGateUrl": "https://www.researchgate.net/profile/Qing-An-3"
   },
   {
     "name": "Cheng Chen",
     "role": "Ph.D. Candidate",
     "start": "2021.9",
-    "avatar": "/assets/avatars/cats/cheng-chen.png"
+    "avatar": "/assets/avatars/cats/cheng-chen.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Ruijiang Fan",
     "role": "Ph.D. Candidate",
     "start": "2022.9",
-    "avatar": "/assets/avatars/cats/ruijiang-fan.png"
+    "avatar": "/assets/avatars/cats/ruijiang-fan.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Gang Wang",
     "role": "Ph.D. Candidate",
     "start": "2022.9",
-    "avatar": "/assets/avatars/cats/gang-wang.png"
+    "avatar": "/assets/avatars/cats/gang-wang.png",
+    "scholarUrl": "",
+    "researchGateUrl": "https://www.researchgate.net/profile/Gang-Wang-271"
   },
   {
     "name": "Zhi Qu",
     "role": "Ph.D. Candidate",
     "start": "2022.9",
-    "avatar": "/assets/avatars/cats/zhi-qu.png"
+    "avatar": "/assets/avatars/cats/zhi-qu.png",
+    "scholarUrl": "",
+    "researchGateUrl": "https://www.researchgate.net/profile/Zhi-Qu-13"
   },
   {
     "name": "Yue Guan",
     "role": "Ph.D. Student",
     "start": "2024.4",
-    "avatar": "/assets/avatars/cats/yue-guan.png"
+    "avatar": "/assets/avatars/cats/yue-guan.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Chengtao Sun",
     "role": "Ph.D. Student",
     "start": "2024.10",
-    "avatar": "/assets/avatars/cats/chengtao-sun.png"
+    "avatar": "/assets/avatars/cats/chengtao-sun.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Weiping Li",
     "role": "Ph.D. Student",
     "start": "2024.10",
-    "avatar": "/assets/avatars/cats/weiping-li.png"
+    "avatar": "/assets/avatars/cats/weiping-li.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Zhongkai Ji",
     "role": "Ph.D. Student",
     "start": "2025.3",
-    "avatar": "/assets/avatars/cats/zhongkai-ji.png"
+    "avatar": "/assets/avatars/cats/zhongkai-ji.png",
+    "scholarUrl": "https://scholar.google.com/citations?user=oMqbBlQAAAAJ&hl=zh-CN",
+    "researchGateUrl": "https://www.researchgate.net/profile/Zhongkai-Ji"
   },
   {
     "name": "Yutong Huang",
     "role": "Ph.D. Student",
     "start": "2025.11",
-    "avatar": "/assets/avatars/cats/yutong-huang.png"
+    "avatar": "/assets/avatars/cats/yutong-huang.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Yingzhi Xiong",
     "role": "Ph.D. Student",
     "start": "2025.11",
-    "avatar": "/assets/avatars/cats/yingzhi-xiong.png"
+    "avatar": "/assets/avatars/cats/yingzhi-xiong.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Yongtao Zhao",
     "role": "Postgraduate",
     "start": "2024.9",
-    "avatar": "/assets/avatars/cats/yongtao-zhao.png"
+    "avatar": "/assets/avatars/cats/yongtao-zhao.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Hanwen Jiang",
     "role": "Postgraduate",
     "start": "2025.9",
-    "avatar": "/assets/avatars/cats/hanwen-jiang.png"
+    "avatar": "/assets/avatars/cats/hanwen-jiang.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Xingwei Huang",
     "role": "Postgraduate",
     "start": "2025.9",
-    "avatar": "/assets/avatars/cats/xingwei-huang.png"
+    "avatar": "/assets/avatars/cats/xingwei-huang.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Wenxu Wang",
     "role": "Postgraduate",
     "start": "2025.9",
-    "avatar": "/assets/avatars/cats/wenxu-wang.png"
+    "avatar": "/assets/avatars/cats/wenxu-wang.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   },
   {
     "name": "Tao Wang",
     "role": "Postgraduate",
     "start": "2025.9",
-    "avatar": "/assets/avatars/cats/tao-wang.png"
+    "avatar": "/assets/avatars/cats/tao-wang.png",
+    "scholarUrl": "",
+    "researchGateUrl": ""
   }
 ]
