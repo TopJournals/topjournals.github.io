@@ -46,18 +46,18 @@
   },
   {
     "year": 2026,
-    "authors": "Zhi Qu, Wenhe Liao, Dawei Li, Tingting Liu, Zhongkai Ji, Junming Zhao",
     "title": "Lightweight conformal design of optically transparent and broadband microwave absorbing metamaterial",
+    "authors": "Zhi Qu, Wenhe Liao*, Dawei Li, Tingting Liu, Zhongkai Ji, Junming Zhao",
     "venue": "Advanced Composites and Hybrid Materials, 2026",
     "tags": [
       "Transparent absorber",
       "Broadband absorption",
       "Metamaterial"
     ],
+    "paperUrl": "https://doi.org/10.1007/s42114-026-01815-6",
     "status": "",
     "featured": true,
-    "highlyCited": false,
-    "paperUrl": "https://doi.org/10.1007/s42114-026-01815-6"
+    "highlyCited": false
   },
   {
     "year": 2026,
