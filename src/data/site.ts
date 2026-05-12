@@ -7,6 +7,7 @@ export type SiteProfile = {
   url: string;
   leader: string;
   leaderChinese: string;
+  leaderAvatar: string;
   affiliation: string;
   address: string;
   email: string;
@@ -25,6 +26,7 @@ export const site = {
   url: profile.url,
   leader: profile.leader,
   leaderChinese: profile.leaderChinese,
+  leaderAvatar: profile.leaderAvatar,
   affiliation: profile.affiliation,
   address: profile.address,
   email: profile.email,
