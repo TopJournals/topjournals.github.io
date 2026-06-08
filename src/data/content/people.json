@@ -1,19 +1,12 @@
 [
   {
-    "name": "Qing An",
-    "role": "Ph.D. Candidate",
-    "start": "2020.9",
-    "avatar": "/assets/avatars/cats/qing-an.png",
-    "scholarUrl": "",
-    "researchGateUrl": "https://www.researchgate.net/profile/Qing-An-3"
-  },
-  {
     "name": "Cheng Chen",
     "role": "Ph.D. Candidate",
     "start": "2021.9",
     "avatar": "/assets/avatars/cats/cheng-chen.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Ruijiang Fan",
@@ -21,7 +14,8 @@
     "start": "2022.9",
     "avatar": "/assets/avatars/cats/ruijiang-fan.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Gang Wang",
@@ -29,7 +23,8 @@
     "start": "2022.9",
     "avatar": "/assets/avatars/cats/gang-wang.png",
     "scholarUrl": "",
-    "researchGateUrl": "https://www.researchgate.net/profile/Gang-Wang-271"
+    "researchGateUrl": "https://www.researchgate.net/profile/Gang-Wang-271",
+    "status": "current"
   },
   {
     "name": "Zhi Qu",
@@ -37,7 +32,8 @@
     "start": "2022.9",
     "avatar": "/assets/avatars/cats/zhi-qu.png",
     "scholarUrl": "",
-    "researchGateUrl": "https://www.researchgate.net/profile/Zhi-Qu-13"
+    "researchGateUrl": "https://www.researchgate.net/profile/Zhi-Qu-13",
+    "status": "current"
   },
   {
     "name": "Yue Guan",
@@ -45,7 +41,8 @@
     "start": "2024.4",
     "avatar": "/assets/avatars/cats/yue-guan.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Chengtao Sun",
@@ -53,7 +50,8 @@
     "start": "2024.10",
     "avatar": "/assets/avatars/cats/chengtao-sun.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Weiping Li",
@@ -61,7 +59,8 @@
     "start": "2024.10",
     "avatar": "/assets/avatars/cats/weiping-li.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Zhongkai Ji",
@@ -69,7 +68,8 @@
     "start": "2025.3",
     "avatar": "/assets/avatars/cats/zhongkai-ji.png",
     "scholarUrl": "https://scholar.google.com/citations?user=oMqbBlQAAAAJ&hl=zh-CN",
-    "researchGateUrl": "https://www.researchgate.net/profile/Zhongkai-Ji"
+    "researchGateUrl": "https://www.researchgate.net/profile/Zhongkai-Ji",
+    "status": "current"
   },
   {
     "name": "Yutong Huang",
@@ -77,7 +77,8 @@
     "start": "2025.11",
     "avatar": "/assets/avatars/cats/yutong-huang.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Yingzhi Xiong",
@@ -85,7 +86,8 @@
     "start": "2025.11",
     "avatar": "/assets/avatars/cats/yingzhi-xiong.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Yongtao Zhao",
@@ -93,7 +95,8 @@
     "start": "2024.9",
     "avatar": "/assets/avatars/cats/yongtao-zhao.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Hanwen Jiang",
@@ -101,7 +104,8 @@
     "start": "2025.9",
     "avatar": "/assets/avatars/cats/hanwen-jiang.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Xingwei Huang",
@@ -109,7 +113,8 @@
     "start": "2025.9",
     "avatar": "/assets/avatars/cats/xingwei-huang.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Wenxu Wang",
@@ -117,7 +122,8 @@
     "start": "2025.9",
     "avatar": "/assets/avatars/cats/wenxu-wang.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
   },
   {
     "name": "Tao Wang",
@@ -125,6 +131,18 @@
     "start": "2025.9",
     "avatar": "/assets/avatars/cats/tao-wang.png",
     "scholarUrl": "",
-    "researchGateUrl": ""
+    "researchGateUrl": "",
+    "status": "current"
+  },
+  {
+    "name": "Qing An",
+    "role": "Ph.D. Candidate",
+    "start": "2020.9",
+    "avatar": "/assets/avatars/cats/qing-an.png",
+    "scholarUrl": "",
+    "researchGateUrl": "https://www.researchgate.net/profile/Qing-An-3",
+    "status": "graduated",
+    "graduationDate": "2026.6",
+    "destination": "Postdoc at The Hong Kong Polytechnic University"
   }
 ]

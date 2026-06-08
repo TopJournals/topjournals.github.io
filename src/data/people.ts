@@ -7,6 +7,9 @@ export type Person = {
   avatar: string;
   scholarUrl?: string;
   researchGateUrl?: string;
+  status?: 'current' | 'graduated';
+  graduationDate?: string;
+  destination?: string;
 };
 
 export const people: Person[] = peopleData as Person[];
