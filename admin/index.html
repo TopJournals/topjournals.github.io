@@ -277,6 +277,8 @@
           { key: 'authors', label: 'Authors', type: 'textarea', full: true },
           { key: 'venue', label: 'Venue', type: 'textarea', full: true },
           { key: 'tags', label: 'Tags (comma separated)', type: 'text', full: true },
+          { key: 'researchCategory', label: 'Research Category', type: 'text', full: true },
+          { key: 'designCategories', label: 'Design Categories (comma separated)', type: 'text', full: true },
           { key: 'paperUrl', label: 'Paper URL', type: 'text', full: true },
           { key: 'status', label: 'Status', type: 'text' },
           { key: 'featured', label: 'Featured', type: 'checkbox' },
@@ -288,6 +290,8 @@
           authors: '',
           venue: '',
           tags: [],
+          researchCategory: '',
+          designCategories: [],
           paperUrl: '',
           status: '',
           featured: false,
@@ -295,7 +299,8 @@
         }),
         toFormData: (item) => ({
           ...item,
-          tags: Array.isArray(item.tags) ? item.tags.join(', ') : ''
+          tags: Array.isArray(item.tags) ? item.tags.join(', ') : '',
+          designCategories: Array.isArray(item.designCategories) ? item.designCategories.join(', ') : ''
         }),
         fromFormData: (formData) => ({
           year: Number(formData.year || 0),
@@ -303,6 +308,8 @@
           authors: formData.authors.trim(),
           venue: formData.venue.trim(),
           tags: formData.tags.split(',').map((tag) => tag.trim()).filter(Boolean),
+          researchCategory: formData.researchCategory.trim(),
+          designCategories: formData.designCategories.split(',').map((category) => category.trim()).filter(Boolean),
           paperUrl: formData.paperUrl.trim(),
           status: formData.status.trim(),
           featured: Boolean(formData.featured),
@@ -312,6 +319,8 @@
         normalize: (item) => ({
           ...item,
           tags: Array.isArray(item.tags) ? item.tags : [],
+          researchCategory: item.researchCategory ?? '',
+          designCategories: Array.isArray(item.designCategories) ? item.designCategories : [],
           featured: Boolean(item.featured),
           highlyCited: Boolean(item.highlyCited),
           paperUrl: item.paperUrl ?? '',

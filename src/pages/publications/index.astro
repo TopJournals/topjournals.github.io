@@ -2,7 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PublicationCard from '../../components/PublicationCard.astro';
 import SectionIntro from '../../components/SectionIntro.astro';
-import { publicationTags, publicationYears, publications } from '../../data/publications';
+import {
+  publicationDesignCategories,
+  publicationResearchCategories,
+  publicationYears,
+  publications
+} from '../../data/publications';
 import { conferenceActivities } from '../../data/conference';
 import { highlightDaweiLi } from '../../utils/highlightName';
 
@@ -10,6 +15,15 @@ const highlightedConference = conferenceActivities.map((item) => ({
   ...item,
   contributorsHtml: highlightDaweiLi(item.contributors)
 }));
+
+const researchTabs = [
+  { label: 'All Research', value: '', count: publications.length },
+  ...publicationResearchCategories.map((category) => ({
+    label: category,
+    value: category.toLowerCase(),
+    count: publications.filter((publication) => publication.researchCategory === category).length
+  }))
+];
 ---
 
 <BaseLayout title="Publications | Metastructure Lab">
@@ -19,10 +33,38 @@ const highlightedConference = conferenceActivities.map((item) => ({
       title="Publications"
     />
 
-    <div class="mb-8 grid gap-3 rounded border border-slate-200 bg-slate-50 p-4 md:grid-cols-[1fr_170px_220px]">
+    <div class="mb-6 rounded border border-slate-200 bg-slate-50 p-2">
+      <div id="publication-research-tabs" class="grid gap-2 md:grid-cols-2 xl:grid-cols-3" role="tablist" aria-label="Research categories">
+        {researchTabs.map((tab, index) => (
+          <button
+            type="button"
+            class:list={[
+              'research-tab focus-ring flex min-h-12 items-center justify-between gap-3 rounded border px-4 py-3 text-left text-sm font-bold leading-snug transition-colors',
+              index === 0
+                ? 'border-academic-blue bg-academic-blue text-white shadow-sm'
+                : 'border-slate-200 bg-white text-slate-700 hover:border-blue-200 hover:bg-blue-50 hover:text-academic-heading'
+            ]}
+            data-research={tab.value}
+            aria-selected={index === 0 ? 'true' : 'false'}
+          >
+            <span>{tab.label}</span>
+            <span
+              class:list={[
+                'shrink-0 rounded-full px-2 py-0.5 text-xs font-bold',
+                index === 0 ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
+              ]}
+            >
+              {tab.count}
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <div class="mb-8 grid gap-3 rounded border border-slate-200 bg-slate-50 p-4 md:grid-cols-[minmax(0,1fr)_140px_minmax(190px,260px)]">
       <label class="block">
         <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Search</span>
-        <input id="publication-search" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm" type="search" placeholder="Title, author, venue, tag" />
+        <input id="publication-search" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm" type="search" placeholder="Title, author, venue, category" />
       </label>
       <label class="block">
         <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Year</span>
@@ -32,10 +74,10 @@ const highlightedConference = conferenceActivities.map((item) => ({
         </select>
       </label>
       <label class="block">
-        <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Tag</span>
-        <select id="publication-tag" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm">
-          <option value="">All tags</option>
-          {publicationTags.map((tag) => <option value={tag.toLowerCase()}>{tag}</option>)}
+        <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Design</span>
+        <select id="publication-design" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm">
+          <option value="">All design</option>
+          {publicationDesignCategories.map((category) => <option value={category.toLowerCase()}>{category}</option>)}
         </select>
       </label>
     </div>
@@ -73,25 +115,28 @@ const highlightedConference = conferenceActivities.map((item) => ({
   <script>
     const searchInput = document.querySelector<HTMLInputElement>('#publication-search');
     const yearSelect = document.querySelector<HTMLSelectElement>('#publication-year');
-    const tagSelect = document.querySelector<HTMLSelectElement>('#publication-tag');
+    const researchTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.research-tab'));
+    const designSelect = document.querySelector<HTMLSelectElement>('#publication-design');
     const cards = Array.from(document.querySelectorAll<HTMLElement>('.publication-card'));
     const count = document.querySelector<HTMLElement>('#publication-count');
     const empty = document.querySelector<HTMLElement>('#publication-empty');
+    let activeResearch = '';
 
     function applyFilters() {
-      if (!searchInput || !yearSelect || !tagSelect || !count || !empty) return;
+      if (!searchInput || !yearSelect || !designSelect || !count || !empty) return;
 
       const query = searchInput.value.trim().toLowerCase();
       const year = yearSelect.value;
-      const tag = tagSelect.value;
+      const design = designSelect.value;
       let visible = 0;
 
       for (const card of cards) {
         const haystack = `${card.dataset.title} ${card.dataset.authors} ${card.textContent}`.toLowerCase();
         const matchesQuery = !query || haystack.includes(query);
         const matchesYear = !year || card.dataset.year === year;
-        const matchesTag = !tag || Boolean(card.dataset.tags?.includes(tag));
-        const show = matchesQuery && matchesYear && matchesTag;
+        const matchesResearch = !activeResearch || card.dataset.research === activeResearch;
+        const matchesDesign = !design || Boolean(card.dataset.design?.includes(design));
+        const show = matchesQuery && matchesYear && matchesResearch && matchesDesign;
         card.classList.toggle('hidden', !show);
         if (show) visible += 1;
       }
@@ -102,6 +147,31 @@ const highlightedConference = conferenceActivities.map((item) => ({
 
     searchInput?.addEventListener('input', applyFilters);
     yearSelect?.addEventListener('change', applyFilters);
-    tagSelect?.addEventListener('change', applyFilters);
+    designSelect?.addEventListener('change', applyFilters);
+    researchTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        activeResearch = tab.dataset.research || '';
+        researchTabs.forEach((item) => {
+          const selected = item === tab;
+          item.setAttribute('aria-selected', String(selected));
+          item.classList.toggle('border-academic-blue', selected);
+          item.classList.toggle('bg-academic-blue', selected);
+          item.classList.toggle('text-white', selected);
+          item.classList.toggle('shadow-sm', selected);
+          item.classList.toggle('border-slate-200', !selected);
+          item.classList.toggle('bg-white', !selected);
+          item.classList.toggle('text-slate-700', !selected);
+          item.classList.toggle('hover:border-blue-200', !selected);
+          item.classList.toggle('hover:bg-blue-50', !selected);
+          item.classList.toggle('hover:text-academic-heading', !selected);
+          const badge = item.querySelector('span:last-child');
+          badge?.classList.toggle('bg-white/20', selected);
+          badge?.classList.toggle('text-white', selected);
+          badge?.classList.toggle('bg-slate-100', !selected);
+          badge?.classList.toggle('text-slate-500', !selected);
+        });
+        applyFilters();
+      });
+    });
   </script>
 </BaseLayout>

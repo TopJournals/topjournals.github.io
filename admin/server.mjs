@@ -119,9 +119,11 @@ const validateCollectionPayload = (collection, data) => {
         typeof item.authors !== 'string' ||
         typeof item.year !== 'number' ||
         typeof item.venue !== 'string' ||
-        !Array.isArray(item.tags)
+        !Array.isArray(item.tags) ||
+        typeof item.researchCategory !== 'string' ||
+        !Array.isArray(item.designCategories)
       ) {
-        throw new Error('Each publication must include title, authors, year, venue, and tags.');
+        throw new Error('Each publication must include title, authors, year, venue, tags, researchCategory, and designCategories.');
       }
     }
   }

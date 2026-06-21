@@ -12,7 +12,11 @@
     "paperUrl": "https://arxiv.org/abs/2604.23181",
     "status": "Under Review",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -27,7 +31,12 @@
     "status": "Revise",
     "featured": false,
     "highlyCited": false,
-    "paperUrl": ""
+    "paperUrl": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "AI & Data-driven Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -42,7 +51,12 @@
     "paperUrl": "http://engine.scichina.com/doi/10.1007/s11431-026-3367-8",
     "status": "Accepted",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "AI & Data-driven Design",
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2026,
@@ -53,7 +67,11 @@
     "paperUrl": "https://doi.org/10.1364/OE.596513",
     "status": "",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2026,
@@ -68,7 +86,12 @@
     "paperUrl": "https://doi.org/10.1007/s42114-026-01815-6",
     "status": "",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -83,7 +106,12 @@
     "paperUrl": "https://doi.org/10.1016/j.compscitech.2026.111658",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Reconfigurable & Tunable Design"
+    ]
   },
   {
     "year": 2026,
@@ -98,7 +126,12 @@
     "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0263823126002430#fig0014",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -113,7 +146,11 @@
     "paperUrl": "https://doi.org/10.1039/D6MH00199H",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -128,7 +165,11 @@
     "paperUrl": "https://doi.org/10.1016/j.amf.2026.200322",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -143,7 +184,12 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111176",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2026,
@@ -158,7 +204,11 @@
     "status": "Published",
     "paperUrl": "https://wulixb.iphy.ac.cn/cn/article/doi/10.7498/aps.75.20251200",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2026,
@@ -173,7 +223,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.cma.2025.118405",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2025,
@@ -188,7 +242,12 @@
     "paperUrl": "https://www.science.org/doi/10.1126/sciadv.aeb7870",
     "featured": true,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Bio-inspired Design",
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2025,
@@ -203,7 +262,12 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1002/adma.202511070",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Bio-inspired Design",
+      "Reconfigurable & Tunable Design"
+    ]
   },
   {
     "year": 2025,
@@ -218,7 +282,11 @@
     "paperUrl": "https://doi.org/10.1002/admt.202500581",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2025,
@@ -233,7 +301,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1080/17452759.2025.2499452",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2025,
@@ -248,7 +320,11 @@
     "paperUrl": "https://doi.org/10.1016/j.compscitech.2025.111131",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2025,
@@ -263,7 +339,12 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.engstruct.2025.119666",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Bio-inspired Design"
+    ]
   },
   {
     "year": 2025,
@@ -278,7 +359,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.tws.2024.112784",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2025,
@@ -293,7 +378,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.compstruct.2024.118759",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2025,
@@ -308,7 +397,12 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1002/adfm.202414629",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Bio-inspired Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2025,
@@ -323,7 +417,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1080/15397734.2024.2381697",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2024,
@@ -338,7 +436,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.compositesb.2024.111880",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2024,
@@ -353,7 +455,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1002/adma.202408216",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Reconfigurable & Tunable Design"
+    ]
   },
   {
     "year": 2024,
@@ -368,7 +474,11 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.compositesb.2024.111484",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2024,
@@ -383,7 +493,12 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1016/j.engstruct.2024.118134",
     "featured": true,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "AI & Data-driven Design",
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2023,
@@ -398,7 +513,11 @@
     "status": "Published",
     "paperUrl": "https://www.sciencedirect.com/science/article/pii/S1359836823005103",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2023,
@@ -413,7 +532,12 @@
     "status": "Published",
     "paperUrl": "https://ieeexplore.ieee.org/document/10188897",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "AI & Data-driven Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2023,
@@ -428,7 +552,12 @@
     "status": "Published",
     "paperUrl": "https://doi.org/10.1002/adma.202300659",
     "featured": true,
-    "highlyCited": true
+    "highlyCited": true,
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Bio-inspired Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2023,
@@ -443,7 +572,12 @@
     "status": "Published",
     "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0263822322011849",
     "featured": false,
-    "highlyCited": false
+    "highlyCited": false,
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Bio-inspired Design"
+    ]
   },
   {
     "year": 2022,
@@ -458,7 +592,12 @@
     "paperUrl": "https://doi.org/10.1016/j.matdes.2022.111254",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "AI & Data-driven Design",
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2022,
@@ -473,7 +612,12 @@
     "paperUrl": "https://doi.org/10.1016/j.matdes.2022.110916",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Bio-inspired Design"
+    ]
   },
   {
     "year": 2022,
@@ -488,7 +632,12 @@
     "paperUrl": "https://pubs.aip.org/aip/jap/article/132/13/135109/2837642/Molecular-dynamics-simulations-to-understand-the",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Bio-inspired Design"
+    ]
   },
   {
     "year": 2022,
@@ -503,7 +652,11 @@
     "paperUrl": "https://ieeexplore.ieee.org/abstract/document/9824912",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Electromagnetic & Stealth Metastructures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2022,
@@ -518,7 +671,11 @@
     "paperUrl": "http://www.amte.net.cn/CN/abstract/abstract5310.shtml",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2021,
@@ -533,7 +690,11 @@
     "paperUrl": "https://doi.org/10.1016/j.matdes.2021.110062",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design"
+    ]
   },
   {
     "year": 2021,
@@ -548,7 +709,12 @@
     "paperUrl": "https://doi.org/10.1007/s00170-021-07175-3",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2020,
@@ -563,7 +729,12 @@
     "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0010448519302386",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2020,
@@ -578,7 +749,12 @@
     "paperUrl": "https://doi.org/10.1016/j.addma.2020.101539",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Bio-inspired Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2020,
@@ -593,7 +769,11 @@
     "paperUrl": "https://doi.org/10.1016/j.addma.2020.101116",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2020,
@@ -608,7 +788,11 @@
     "paperUrl": "https://doi.org/10.1007/s00170-019-04495-3",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2020,
@@ -623,7 +807,11 @@
     "paperUrl": "https://doi.org/10.1007/s00170-019-04347-0",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2020,
@@ -638,7 +826,11 @@
     "paperUrl": "https://www.jcad.cn/cn/article/doi/10.3724/SP.J.1089.2020.17870",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2019,
@@ -653,7 +845,12 @@
     "paperUrl": "https://www.mdpi.com/1996-1944/12/13/2183",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Bio-inspired Design"
+    ]
   },
   {
     "year": 2019,
@@ -668,7 +865,12 @@
     "paperUrl": "https://asmedigitalcollection.asme.org/mechanicaldesign/article/141/7/071402/727182/Design-and-Optimization-of-Graded-Cellular",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2019,
@@ -683,7 +885,12 @@
     "paperUrl": "http://www.cjmenet.com.cn/CN/10.3901/JME.2019.13.175",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Reconfigurable & Tunable Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2019,
@@ -698,7 +905,12 @@
     "paperUrl": "https://doi.org/10.1016/j.matdes.2019.108000",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Reconfigurable & Tunable Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2019,
@@ -713,7 +925,12 @@
     "paperUrl": "https://doi.org/10.1002/adem.201801279",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Reconfigurable & Tunable Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2019,
@@ -728,7 +945,12 @@
     "paperUrl": "https://doi.org/10.1115/1.4043559",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2018,
@@ -743,7 +965,13 @@
     "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0010448518300381",
     "highlyCited": true,
     "featured": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Mechanical Metamaterials & Lattices",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Bio-inspired Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2018,
@@ -758,7 +986,11 @@
     "paperUrl": "https://doi.org/10.1007/s00170-017-1261-6",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2018,
@@ -773,7 +1005,11 @@
     "paperUrl": "https://doi.org/10.1177/0954406217737105",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2018,
@@ -788,7 +1024,11 @@
     "paperUrl": "https://doi.org/10.1016/j.promfg.2018.07.090",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2018,
@@ -803,7 +1043,11 @@
     "paperUrl": "http://www.cims-journal.cn/CN/10.13196/j.cims.2018.09.003",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2017,
@@ -818,7 +1062,11 @@
     "paperUrl": "https://doi.org/10.1002/cnm.2878",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2016,
@@ -833,7 +1081,12 @@
     "paperUrl": "https://doi.org/10.1007/s00170-015-7704-z",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Manufacturing & Computational Design",
+    "designCategories": [
+      "Topology, Gradient & Heterogeneous Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   },
   {
     "year": 2016,
@@ -848,6 +1101,11 @@
     "paperUrl": "http://www.cjmenet.com.cn/CN/10.3901/JME.2016.23.182",
     "featured": false,
     "highlyCited": false,
-    "status": ""
+    "status": "",
+    "researchCategory": "Biomedical & Programmable Structures",
+    "designCategories": [
+      "Bio-inspired Design",
+      "Manufacturing-aware & CAD Modeling"
+    ]
   }
 ]
