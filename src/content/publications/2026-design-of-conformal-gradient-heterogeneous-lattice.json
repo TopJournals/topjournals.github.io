@@ -1,0 +1,22 @@
+{
+  "year": 2026,
+  "authors": "Cong Ai, Changdong Zhang*, Kanghui Song, Xinze Shen, Dawei Li, Wenhe Liao, Tingting Liu*",
+  "title": "Design of conformal gradient heterogeneous lattices via bidirectional isoparametric mapping",
+  "venue": "International Journal of Mechanical Sciences, 2026, 311:111176",
+  "tags": [
+    "Conformal lattice",
+    "Gradient design",
+    "Mapping"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1016/j.ijmecsci.2026.111176",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2026-design-of-conformal-gradient-heterogeneous-lattice",
+  "firstAuthor": "Cong Ai"
+}

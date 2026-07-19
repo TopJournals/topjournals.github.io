@@ -1,0 +1,21 @@
+{
+  "year": 2025,
+  "authors": "Qing An, Dawei Li*, Wenhe Liao*, Tingting Liu, Weiping Li",
+  "title": "Lightweight Electromagnetic Wave-Absorbing Metastructures: Advances in 3D Printing-Based Design and Manufacturing",
+  "venue": "Advanced Materials Technologies, 2025",
+  "tags": [
+    "Review",
+    "3D printing",
+    "EM absorption"
+  ],
+  "paperUrl": "https://doi.org/10.1002/admt.202500581",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Electromagnetic & Stealth Metastructures",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2025-lightweight-electromagnetic-wave-absorbing-metastr",
+  "firstAuthor": "Qing An"
+}

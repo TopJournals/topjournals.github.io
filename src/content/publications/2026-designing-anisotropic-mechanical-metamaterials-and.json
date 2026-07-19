@@ -1,0 +1,22 @@
+{
+  "year": 2026,
+  "authors": "Zhongkai Ji, Dawei Li*, Wenhe Liao, Xiaoya Zhai, Jie Gao, Yunlong Tang, Ning Dai, Yong Zhao*, Yi Min Xie*",
+  "title": "Designing Anisotropic Mechanical Metamaterials and Metastructures: A Review",
+  "venue": "Thin-Walled Structures, 2026, 114719",
+  "tags": [
+    "Review",
+    "Anisotropy",
+    "Mechanical metamaterials"
+  ],
+  "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0263823126002430#fig0014",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2026-designing-anisotropic-mechanical-metamaterials-and",
+  "firstAuthor": "Zhongkai Ji"
+}

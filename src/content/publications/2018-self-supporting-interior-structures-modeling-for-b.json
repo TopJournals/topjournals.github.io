@@ -1,0 +1,21 @@
+{
+  "year": 2018,
+  "authors": "Dawei Li, Ning Dai*, Xin Zhou, Renkai Huang, Wenhe Liao",
+  "title": "Self-supporting interior structures modeling for buoyancy optimization of computational fabrication",
+  "venue": "The International Journal of Advanced Manufacturing Technology, 2018, 95(1-4): 825-834",
+  "tags": [
+    "Self-supporting",
+    "Buoyancy optimization",
+    "Computational fabrication"
+  ],
+  "paperUrl": "https://doi.org/10.1007/s00170-017-1261-6",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Manufacturing & Computational Design",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2018-self-supporting-interior-structures-modeling-for-b",
+  "firstAuthor": "Dawei Li"
+}

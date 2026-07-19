@@ -1,0 +1,21 @@
+{
+  "year": 2026,
+  "authors": "Xinze Shen#, Changdong Zhang#*, Wenhe Liao*, Dawei Li, Tingting Liu",
+  "title": "Configuration-decoupled concurrent topology optimization of heterogeneous lattice structures",
+  "venue": "Computer Methods in Applied Mechanics and Engineering, 2026, 448:118405",
+  "tags": [
+    "Topology optimization",
+    "Heterogeneous lattice",
+    "Concurrent design"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1016/j.cma.2025.118405",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2026-configuration-decoupled-concurrent-topology-optimi",
+  "firstAuthor": "Xinze Shen#"
+}

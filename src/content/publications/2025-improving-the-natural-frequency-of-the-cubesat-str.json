@@ -1,0 +1,21 @@
+{
+  "year": 2025,
+  "authors": "Cong Wang, Changdong Zhang*, Dawei Li*, Tingting Liu, Wenhe Liao",
+  "title": "Improving the natural frequency of the CubeSat structure using voxel-based topology optimization method with the four-connected seed filling",
+  "venue": "Mechanics Based Design of Structures and Machines, 2025, 53(2): 1031-1044",
+  "tags": [
+    "CubeSat",
+    "Topology optimization",
+    "Natural frequency"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1080/15397734.2024.2381697",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2025-improving-the-natural-frequency-of-the-cubesat-str",
+  "firstAuthor": "Cong Wang"
+}

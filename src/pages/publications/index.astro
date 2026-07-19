@@ -8,22 +8,6 @@ import {
   publicationYears,
   publications
 } from '../../data/publications';
-import { conferenceActivities } from '../../data/conference';
-import { highlightDaweiLi } from '../../utils/highlightName';
-
-const highlightedConference = conferenceActivities.map((item) => ({
-  ...item,
-  contributorsHtml: highlightDaweiLi(item.contributors)
-}));
-
-const researchTabs = [
-  { label: 'All Research', value: '', count: publications.length },
-  ...publicationResearchCategories.map((category) => ({
-    label: category,
-    value: category.toLowerCase(),
-    count: publications.filter((publication) => publication.researchCategory === category).length
-  }))
-];
 ---
 
 <BaseLayout title="Publications | Metastructure Lab">
@@ -33,35 +17,7 @@ const researchTabs = [
       title="Publications"
     />
 
-    <div class="mb-6 rounded border border-slate-200 bg-slate-50 p-2">
-      <div id="publication-research-tabs" class="grid gap-2 md:grid-cols-2 xl:grid-cols-3" role="tablist" aria-label="Research categories">
-        {researchTabs.map((tab, index) => (
-          <button
-            type="button"
-            class:list={[
-              'research-tab focus-ring flex min-h-12 items-center justify-between gap-3 rounded border px-4 py-3 text-left text-sm font-bold leading-snug transition-colors',
-              index === 0
-                ? 'border-academic-blue bg-academic-blue text-white shadow-sm'
-                : 'border-slate-200 bg-white text-slate-700 hover:border-blue-200 hover:bg-blue-50 hover:text-academic-heading'
-            ]}
-            data-research={tab.value}
-            aria-selected={index === 0 ? 'true' : 'false'}
-          >
-            <span>{tab.label}</span>
-            <span
-              class:list={[
-                'shrink-0 rounded-full px-2 py-0.5 text-xs font-bold',
-                index === 0 ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
-              ]}
-            >
-              {tab.count}
-            </span>
-          </button>
-        ))}
-      </div>
-    </div>
-
-    <div class="mb-8 grid gap-3 rounded border border-slate-200 bg-slate-50 p-4 md:grid-cols-[minmax(0,1fr)_140px_minmax(190px,260px)]">
+    <div class="mb-8 grid gap-4 rounded border border-slate-200 bg-slate-50 p-4 sm:grid-cols-2 lg:grid-cols-4">
       <label class="block">
         <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Search</span>
         <input id="publication-search" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm" type="search" placeholder="Title, author, venue, category" />
@@ -74,6 +30,13 @@ const researchTabs = [
         </select>
       </label>
       <label class="block">
+        <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Research</span>
+        <select id="publication-research" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm">
+          <option value="">All research</option>
+          {publicationResearchCategories.map((category) => <option value={category.toLowerCase()}>{category}</option>)}
+        </select>
+      </label>
+      <label class="block">
         <span class="mb-1 block text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Design</span>
         <select id="publication-design" class="focus-ring w-full rounded border border-slate-300 bg-white px-3 py-2 text-sm">
           <option value="">All design</option>
@@ -83,50 +46,29 @@ const researchTabs = [
     </div>
 
     <p id="publication-count" class="mb-3 text-sm font-medium text-slate-500">{publications.length} publications</p>
-    <div id="publication-list">
+
+    <div id="publication-list" class="space-y-4">
       {publications.map((publication) => <PublicationCard publication={publication} />)}
     </div>
     <p id="publication-empty" class="hidden rounded border border-slate-200 bg-slate-50 p-6 text-slate-600">No publications match the current filters.</p>
 
-    <div id="conference-activities" class="mt-14 space-y-6">
-      <article class="hover-card rounded border border-slate-200 bg-slate-50 p-6 shadow-sm">
-        <div class="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <div>
-            <h2 class="text-2xl font-bold text-academic-heading">Conference Papers & Presentations</h2>
-          </div>
-        </div>
-        <div class="space-y-5">
-          {highlightedConference.map((item) => (
-            <article class="border-b border-slate-200 pb-5 last:border-b-0 last:pb-0">
-              <div class="mb-2 flex flex-wrap items-center gap-2">
-                <span class="rounded bg-white px-2 py-1 text-xs font-semibold text-slate-600">{item.kind}</span>
-                <span class="text-xs font-semibold uppercase tracking-[0.12em] text-slate-400">{item.date}</span>
-              </div>
-              <h3 class="font-bold leading-snug text-academic-heading">{item.title}</h3>
-              <p class="mt-1 text-sm text-slate-600" set:html={item.contributorsHtml} />
-              <p class="mt-1 text-sm text-slate-500">{item.venue}, {item.location}</p>
-            </article>
-          ))}
-        </div>
-      </article>
-    </div>
   </section>
 
   <script>
     const searchInput = document.querySelector<HTMLInputElement>('#publication-search');
     const yearSelect = document.querySelector<HTMLSelectElement>('#publication-year');
-    const researchTabs = Array.from(document.querySelectorAll<HTMLButtonElement>('.research-tab'));
+    const researchSelect = document.querySelector<HTMLSelectElement>('#publication-research');
     const designSelect = document.querySelector<HTMLSelectElement>('#publication-design');
     const cards = Array.from(document.querySelectorAll<HTMLElement>('.publication-card'));
     const count = document.querySelector<HTMLElement>('#publication-count');
     const empty = document.querySelector<HTMLElement>('#publication-empty');
-    let activeResearch = '';
 
     function applyFilters() {
-      if (!searchInput || !yearSelect || !designSelect || !count || !empty) return;
+      if (!searchInput || !yearSelect || !researchSelect || !designSelect || !count || !empty) return;
 
       const query = searchInput.value.trim().toLowerCase();
       const year = yearSelect.value;
+      const research = researchSelect.value;
       const design = designSelect.value;
       let visible = 0;
 
@@ -134,10 +76,11 @@ const researchTabs = [
         const haystack = `${card.dataset.title} ${card.dataset.authors} ${card.textContent}`.toLowerCase();
         const matchesQuery = !query || haystack.includes(query);
         const matchesYear = !year || card.dataset.year === year;
-        const matchesResearch = !activeResearch || card.dataset.research === activeResearch;
+        const matchesResearch = !research || card.dataset.research === research;
         const matchesDesign = !design || Boolean(card.dataset.design?.includes(design));
         const show = matchesQuery && matchesYear && matchesResearch && matchesDesign;
         card.classList.toggle('hidden', !show);
+        card.style.display = show ? '' : 'none'; // Ensure display none is set if card doesn't use standard hidden class
         if (show) visible += 1;
       }
 
@@ -147,31 +90,7 @@ const researchTabs = [
 
     searchInput?.addEventListener('input', applyFilters);
     yearSelect?.addEventListener('change', applyFilters);
+    researchSelect?.addEventListener('change', applyFilters);
     designSelect?.addEventListener('change', applyFilters);
-    researchTabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        activeResearch = tab.dataset.research || '';
-        researchTabs.forEach((item) => {
-          const selected = item === tab;
-          item.setAttribute('aria-selected', String(selected));
-          item.classList.toggle('border-academic-blue', selected);
-          item.classList.toggle('bg-academic-blue', selected);
-          item.classList.toggle('text-white', selected);
-          item.classList.toggle('shadow-sm', selected);
-          item.classList.toggle('border-slate-200', !selected);
-          item.classList.toggle('bg-white', !selected);
-          item.classList.toggle('text-slate-700', !selected);
-          item.classList.toggle('hover:border-blue-200', !selected);
-          item.classList.toggle('hover:bg-blue-50', !selected);
-          item.classList.toggle('hover:text-academic-heading', !selected);
-          const badge = item.querySelector('span:last-child');
-          badge?.classList.toggle('bg-white/20', selected);
-          badge?.classList.toggle('text-white', selected);
-          badge?.classList.toggle('bg-slate-100', !selected);
-          badge?.classList.toggle('text-slate-500', !selected);
-        });
-        applyFilters();
-      });
-    });
   </script>
 </BaseLayout>

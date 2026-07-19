@@ -1,0 +1,21 @@
+{
+  "year": 2026,
+  "title": "A 99 Line Homogenization Code for Lattice-skin Plate Structures",
+  "authors": "Zhongkai Ji, Dawei Li*, Yong Zhao*, Wenhe Liao",
+  "venue": "Educational Paper, Under Review, 2026",
+  "tags": [
+    "Homogenization",
+    "Lattice-skin",
+    "Open source"
+  ],
+  "paperUrl": "https://arxiv.org/abs/2604.23181",
+  "status": "Under Review",
+  "featured": true,
+  "highlyCited": false,
+  "researchCategory": "Manufacturing & Computational Design",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2026-a-99-line-homogenization-code-for-lattice-skin-pla",
+  "firstAuthor": "Zhongkai Ji"
+}

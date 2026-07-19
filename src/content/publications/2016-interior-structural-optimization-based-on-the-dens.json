@@ -1,0 +1,22 @@
+{
+  "year": 2016,
+  "authors": "Dawei Li, Ning Dai*, Xiaotong Jiang, Xiaosheng Chen",
+  "title": "Interior structural optimization based on the density-variable shape modeling of 3D printed objects",
+  "venue": "The International Journal of Advanced Manufacturing Technology, 2016, 83(9-12): 1627-1635",
+  "tags": [
+    "Interior structure",
+    "3D printing",
+    "Optimization"
+  ],
+  "paperUrl": "https://doi.org/10.1007/s00170-015-7704-z",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Manufacturing & Computational Design",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2016-interior-structural-optimization-based-on-the-dens",
+  "firstAuthor": "Dawei Li"
+}

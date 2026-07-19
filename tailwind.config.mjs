@@ -5,11 +5,11 @@ export default {
     extend: {
       colors: {
         academic: {
-          blue: '#1d4ed8',
-          light: '#f8fafc',
-          border: '#e2e8f0',
-          text: '#334155',
-          heading: '#0f172a'
+          blue: 'var(--brand-mid)',
+          light: 'var(--surface-raised)',
+          border: 'var(--border-subtle)',
+          text: 'var(--text-secondary)',
+          heading: 'var(--text-primary)'
         }
       },
       fontFamily: {

@@ -5,15 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "admin": "node admin/server.mjs",
-    "build": "astro check && astro build",
+    "admin": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "check": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.3",
     "@astrojs/tailwind": "^5.1.5",
+    "@keystatic/astro": "^4.0.0",
+    "@keystatic/core": "^0.5.50",
     "astro": "^4.16.18",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "typescript": "^5.6.3"
   },
   "devDependencies": {

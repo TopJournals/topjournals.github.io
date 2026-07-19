@@ -1,0 +1,21 @@
+{
+  "year": 2020,
+  "authors": "Xiaotong Jiang, Ning Dai, Changdong Zhang, Baosu Guo, Dawei Li, Changwen Li",
+  "title": "A Semi-Automatic Precise Tooth Segmentation Algorithm of Dental Model",
+  "venue": "Journal of Computer-Aided Design & Computer Graphics, 2020, 32(5): 820-829",
+  "tags": [
+    "Segmentation",
+    "Dental model",
+    "CAD"
+  ],
+  "paperUrl": "https://www.jcad.cn/cn/article/doi/10.3724/SP.J.1089.2020.17870",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Biomedical & Programmable Structures",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2020-a-semi-automatic-precise-tooth-segmentation-algori",
+  "firstAuthor": "Xiaotong Jiang"
+}

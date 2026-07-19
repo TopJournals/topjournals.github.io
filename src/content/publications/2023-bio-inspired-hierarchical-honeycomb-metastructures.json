@@ -1,0 +1,22 @@
+{
+  "year": 2023,
+  "authors": "Kanghui Song#, Dawei Li#*, Changdong Zhang, Tingting Liu, Yunlong Tang, Yi Min Xie, Wenhe Liao*",
+  "title": "Bio-inspired hierarchical honeycomb metastructures with superior mechanical properties",
+  "venue": "Composite Structures, 2023, 304: 116452",
+  "tags": [
+    "Bio-inspired",
+    "Honeycomb",
+    "Mechanical properties"
+  ],
+  "status": "Published",
+  "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0263822322011849",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Bio-inspired Design"
+  ],
+  "slug": "2023-bio-inspired-hierarchical-honeycomb-metastructures",
+  "firstAuthor": "Kanghui Song#"
+}

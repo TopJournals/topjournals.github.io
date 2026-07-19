@@ -1,0 +1,22 @@
+{
+  "year": 2019,
+  "authors": "Wei Chen, Ning Dai*, Jinqiang Wang, Hao Liu, Dawei Li, Lele Liu",
+  "title": "Personalized design of functional gradient bone tissue engineering scaffold",
+  "venue": "Journal of Biomechanical Engineering, 2019, 141(11)",
+  "tags": [
+    "Bone scaffold",
+    "Functional gradient",
+    "Biomechanics"
+  ],
+  "paperUrl": "https://doi.org/10.1115/1.4043559",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Biomedical & Programmable Structures",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2019-personalized-design-of-functional-gradient-bone-ti",
+  "firstAuthor": "Wei Chen"
+}

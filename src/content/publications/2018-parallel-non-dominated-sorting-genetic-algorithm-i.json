@@ -1,0 +1,21 @@
+{
+  "year": 2018,
+  "authors": "Renkai Huang, Ning Dai*, Dawei Li, Xiaosheng Cheng, Hao Liu, Dengguang Sun",
+  "title": "Parallel non-dominated sorting genetic algorithm-II for optimal part deposition orientation in additive manufacturing based on functional features",
+  "venue": "Proceedings of the Institution of Mechanical Engineers, Part C, 2018, 232(19): 3384-3395",
+  "tags": [
+    "Genetic algorithm",
+    "Deposition orientation",
+    "Additive manufacturing"
+  ],
+  "paperUrl": "https://doi.org/10.1177/0954406217737105",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Manufacturing & Computational Design",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2018-parallel-non-dominated-sorting-genetic-algorithm-i",
+  "firstAuthor": "Renkai Huang"
+}

@@ -1,0 +1,22 @@
+{
+  "year": 2024,
+  "authors": "Zhongkai Ji#, Dawei Li#*, Changdong Zhang, Yi Min Xie, Wenhe Liao",
+  "title": "AI-aided design and multi-scale optimization of mechanical metastructures with controllable anisotropy",
+  "venue": "Engineering Structures, 2024, 310: 118134",
+  "tags": [
+    "AI-aided design",
+    "Multi-scale",
+    "Anisotropy"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1016/j.engstruct.2024.118134",
+  "featured": true,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "AI & Data-driven Design",
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2024-ai-aided-design-and-multi-scale-optimization-of-me",
+  "firstAuthor": "Zhongkai Ji#"
+}

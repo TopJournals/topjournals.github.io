@@ -1,0 +1,23 @@
+{
+  "year": 2018,
+  "authors": "Dawei Li, Wenhe Liao, Ning Dai*, Guoying Dong, Yunlong Tang, Yi Min Xie",
+  "title": "Optimal design and modeling of gyroid-based functionally graded cellular structures for additive manufacturing",
+  "venue": "Computer-Aided Design, 2018, 104: 87-99",
+  "tags": [
+    "Gyroid",
+    "Functionally graded",
+    "Additive manufacturing"
+  ],
+  "paperUrl": "https://www.sciencedirect.com/science/article/pii/S0010448518300381",
+  "highlyCited": true,
+  "featured": false,
+  "status": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Bio-inspired Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2018-optimal-design-and-modeling-of-gyroid-based-functi",
+  "firstAuthor": "Dawei Li"
+}

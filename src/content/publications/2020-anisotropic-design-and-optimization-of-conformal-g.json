@@ -1,0 +1,22 @@
+{
+  "year": 2020,
+  "authors": "Dawei Li, Wenhe Liao, Ning Dai*, Yi Min Xie",
+  "title": "Anisotropic design and optimization of conformal gradient lattice structures",
+  "venue": "Computer-Aided Design, 2020, 119: 102787",
+  "tags": [
+    "Anisotropy",
+    "Conformal gradient",
+    "Lattice"
+  ],
+  "paperUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0010448519302386",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2020-anisotropic-design-and-optimization-of-conformal-g",
+  "firstAuthor": "Dawei Li"
+}

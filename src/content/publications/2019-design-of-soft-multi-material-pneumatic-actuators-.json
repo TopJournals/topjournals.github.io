@@ -1,0 +1,22 @@
+{
+  "year": 2019,
+  "authors": "Longwei Ding, Ning Dai*, Xiaoming Mu, Shaohui Xie, Xu Fan, Dawei Li, Xiaosheng Cheng",
+  "title": "Design of soft multi-material pneumatic actuators based on principal strain field",
+  "venue": "Materials & Design, 2019, 182: 108000",
+  "tags": [
+    "Soft actuator",
+    "Multi-material",
+    "Principal strain"
+  ],
+  "paperUrl": "https://doi.org/10.1016/j.matdes.2019.108000",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Biomedical & Programmable Structures",
+  "designCategories": [
+    "Reconfigurable & Tunable Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2019-design-of-soft-multi-material-pneumatic-actuators-",
+  "firstAuthor": "Longwei Ding"
+}

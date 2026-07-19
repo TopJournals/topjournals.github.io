@@ -1,7 +1,6 @@
-import conferenceData from './content/conference.json';
 
 export type ConferenceActivity = {
-  kind: 'Conference Paper' | 'Presentation';
+  type: 'Conference Paper' | 'Presentation';
   title: string;
   contributors: string;
   venue: string;
@@ -10,4 +9,6 @@ export type ConferenceActivity = {
   url?: string;
 };
 
-export const conferenceActivities: ConferenceActivity[] = conferenceData as ConferenceActivity[];
+const files = import.meta.glob('../content/conference/*.json', { eager: true });
+export const conferenceActivities: ConferenceActivity[] = (Object.values(files).map((mod: any) => mod.default) as ConferenceActivity[])
+  .sort((a, b) => b.date.localeCompare(a.date));

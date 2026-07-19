@@ -1,4 +1,3 @@
-import publicationsData from './content/publications.json';
 
 export type Publication = {
   title: string;
@@ -53,7 +52,9 @@ const pub = (
   status: hasDoi(item.paperUrl) ? 'Published' : item.status || inferStatus(item.year, item.venue)
 });
 
-export const publications: Publication[] = publicationsData.map((item) => pub(item as Publication));
+const files = import.meta.glob('../content/publications/*.json', { eager: true });
+export const publications: Publication[] = (Object.values(files).map((mod: any) => pub(mod.default)))
+  .sort((a, b) => b.year - a.year);
 
 export const publicationYears = Array.from(new Set(publications.map((item) => item.year))).sort(
   (a, b) => b - a

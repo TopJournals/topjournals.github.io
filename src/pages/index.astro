@@ -1,83 +1,233 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NewsList from '../components/NewsList.astro';
-import PublicationCard from '../components/PublicationCard.astro';
-import ResearchCard from '../components/ResearchCard.astro';
 import { site } from '../data/site';
 import { news } from '../data/news';
-import { publications } from '../data/publications';
 import { researchProjects } from '../data/research';
 import { highlightDaweiLi } from '../utils/highlightName';
 
-const featuredPapers = publications.filter((item) => item.featured).slice(0, 5);
-const featuredResearch = researchProjects.filter((item) => item.featured).slice(0, 3);
+const allResearch = researchProjects;
 const highlightedLeader = highlightDaweiLi(site.leader);
 ---
 
 <BaseLayout title={site.title} description={site.description}>
-  <header class="border-b border-academic-border bg-white">
-    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-20">
-      <section>
-        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-slate-600">
+
+  <!-- ===== HERO ===== -->
+  <header class="relative overflow-hidden pt-16 pb-8 lg:pt-24 lg:pb-10">
+    <!-- Extremely subtle background glow (optional, very faint) -->
+    <div class="pointer-events-none absolute left-1/2 top-0 -z-10 h-[600px] w-[800px] -translate-x-1/2 translate-y-[-30%] rounded-full opacity-[0.03]" style="background: radial-gradient(circle, var(--brand-mid) 0%, transparent 70%);"></div>
+
+    <div class="mx-auto grid max-w-6xl gap-16 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+
+      <!-- Left: Original Layout -->
+      <section class="flex flex-col justify-center">
+        <div class="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm text-slate-600">
           Metamaterials · Metastructures · AI-aided Design
         </div>
-        <h1 class="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-academic-heading md:text-6xl">
+        <h1 class="max-w-4xl text-4xl font-bold leading-tight tracking-tight md:text-6xl" style="color: var(--brand-mid);">
           Metastructure Lab
         </h1>
         <p class="mt-5 text-xl font-light text-slate-500">
-          We design architected materials and metastructures that connect mechanics, electromagnetic absorption, additive manufacturing, and computational intelligence.
+          We design architected materials and metastructures that connect <strong class="font-medium text-slate-800">mechanics</strong>, <strong class="font-medium text-slate-800">electromagnetic absorption</strong>, <strong class="font-medium text-slate-800">additive manufacturing</strong>, and <strong class="font-medium text-slate-800">computational intelligence</strong>.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/publications/" class="focus-ring rounded bg-academic-blue px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800">View Publications</a>
-          <a href="/research/" class="focus-ring rounded border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-academic-heading hover:bg-slate-50">Research Areas</a>
+          <a href="/publications/" class="focus-ring rounded px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-800" style="background:var(--brand-mid);">View Publications</a>
+          <a href="/research/" class="focus-ring rounded border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-slate-50" style="color:var(--text-primary);">Research Areas</a>
         </div>
       </section>
-      <aside class="hover-card rounded border border-slate-200 bg-slate-50 p-6 shadow-sm">
-        <p class="text-sm font-semibold uppercase tracking-[0.14em] text-academic-blue">Principal Investigator</p>
-        <h2 class="mt-2 text-2xl font-bold text-academic-heading"><span set:html={highlightedLeader} /> <span class="text-slate-400">{site.leaderChinese}</span></h2>
-        <p class="mt-2 text-slate-600">{site.affiliation}</p>
-        <div class="mt-5 space-y-2 text-sm text-slate-600">
-          <p><strong class="text-slate-700">Email:</strong> <a href={`mailto:${site.email}`} class="text-academic-blue hover:underline">{site.email}</a></p>
-          <p><strong class="text-slate-700">Address:</strong> {site.address}</p>
-        </div>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href={site.scholarUrl} target="_blank" rel="noreferrer" class="rounded border border-slate-300 bg-white px-3 py-2 text-sm font-medium hover:bg-slate-50">Google Scholar</a>
-          <a href={site.researchGateUrl} target="_blank" rel="noreferrer" class="rounded border border-slate-300 bg-white px-3 py-2 text-sm font-medium hover:bg-slate-50">ResearchGate</a>
-        </div>
+
+      <!-- Right: PI Bento Card -->
+      <aside class="flex items-center justify-center lg:justify-end relative">
+        <!-- Floating elegant card -->
+        <article class="relative w-full max-w-md overflow-hidden rounded-2xl bg-white p-1" style="box-shadow: 0 20px 40px -15px rgba(0,0,0,0.05); border: 1px solid var(--border-subtle);">
+          <div class="rounded-xl p-6 sm:p-8" style="background: var(--surface-base);">
+
+            <div class="mb-6 flex items-center gap-5">
+              <img
+                src={site.leaderAvatar}
+                alt={`${site.leader} avatar`}
+                class="h-20 w-20 shrink-0 rounded-full object-cover shadow-sm ring-1 ring-slate-200"
+              />
+              <div>
+                <p class="text-[10px] font-bold uppercase tracking-[0.15em] mb-1" style="color:var(--brand-mid);">Principal Investigator</p>
+                <h2 class="text-xl font-bold" style="color:var(--text-primary);">
+                  <span set:html={highlightedLeader} />
+                  <span class="ml-1.5 text-base font-normal text-slate-400">{site.leaderChinese}</span>
+                </h2>
+                <p class="mt-1 text-sm font-medium" style="color:var(--text-muted);">{site.affiliation}</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 rounded-lg p-4" style="background: var(--surface-raised);">
+              <a href={`mailto:${site.email}`} class="flex items-center gap-3 text-sm font-medium transition-all hover:underline" style="color:var(--brand-mid);">
+                <svg class="h-4 w-4 shrink-0" style="color:var(--brand-mid);" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                {site.email}
+              </a>
+              <div class="flex items-start gap-3 text-sm font-medium" style="color:var(--text-secondary);">
+                <svg class="h-4 w-4 shrink-0 mt-0.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                <span class="leading-relaxed">{site.address}</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-2">
+              <a href={site.scholarUrl} target="_blank" rel="noreferrer" class="inline-flex h-8 items-center rounded-md px-3 text-xs font-semibold transition-colors hover:bg-slate-200" style="background:var(--border-subtle); color:var(--text-secondary);">
+                Google Scholar
+              </a>
+              <a href={site.researchGateUrl} target="_blank" rel="noreferrer" class="inline-flex h-8 items-center rounded-md px-3 text-xs font-semibold transition-colors hover:bg-slate-200" style="background:var(--border-subtle); color:var(--text-secondary);">
+                ResearchGate
+              </a>
+              <a href="/people/" class="ml-auto inline-flex h-8 items-center gap-1 rounded-md px-3 text-xs font-semibold transition-colors" style="background:rgba(29,78,216,0.08); color:var(--brand-mid);">
+                Team Profile →
+              </a>
+            </div>
+
+          </div>
+        </article>
       </aside>
+
     </div>
   </header>
 
-  <section class="border-y border-slate-200 bg-slate-50">
-    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-      <div class="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+  <!-- ===== RESEARCH HIGHLIGHTS — carousel with side buttons ===== -->
+
+  <section style="background: var(--surface-base);" class="py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="mb-6 flex items-center justify-between gap-4 reveal">
         <div>
+          <p class="mb-1 text-xs font-bold uppercase tracking-widest" style="color:var(--brand-mid);">Focus Areas</p>
           <h2 class="section-heading">Research Highlights</h2>
         </div>
-        <a href="/research/" class="text-sm font-semibold text-academic-blue hover:underline">All research</a>
+        <a href="/research/" class="shrink-0 text-xs font-bold uppercase tracking-wider hover:underline" style="color:var(--brand-mid);">All research →</a>
       </div>
-      <div class="grid gap-6 md:grid-cols-3">
-        {featuredResearch.map((project) => <ResearchCard project={project} />)}
+
+      <!-- Carousel: left button | track | right button -->
+      <div class="flex items-center gap-3">
+
+        <!-- Left arrow -->
+        <button id="scroll-prev" aria-label="Previous"
+          class="shrink-0 flex h-9 w-9 items-center justify-center border transition-colors hover:border-blue-500 hover:text-blue-600"
+          style="border-color:var(--border-medium); color:var(--text-muted); border-radius:4px; background:var(--surface-card);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+
+        <!-- Scroll track -->
+        <div class="relative min-w-0 flex-1">
+          <!-- Right fade -->
+          <div class="pointer-events-none absolute right-0 top-0 bottom-4 w-20 z-10" style="background: linear-gradient(to left, var(--surface-base) 20%, transparent);"></div>
+
+          <div
+            id="research-scroll"
+            class="flex gap-4 overflow-x-auto pb-4"
+            style="scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none;"
+          >
+            {allResearch.map((project) => (
+              <article
+                class="shrink-0 overflow-hidden"
+                style="
+                  width: 260px;
+                  scroll-snap-align: start;
+                  background: var(--surface-card);
+                  border: 1px solid var(--border-subtle);
+                  border-radius: 6px;
+                  box-shadow: 0 1px 4px rgba(13,17,23,0.05);
+                  transition: transform 200ms ease, border-color 200ms ease;
+                "
+                onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='var(--brand-mid)';"
+                onmouseout="this.style.transform=''; this.style.borderColor='var(--border-subtle)';"
+              >
+                <div class="flex items-center justify-center overflow-hidden" style="height:150px; background:var(--surface-raised);">
+                  <img src={project.image} alt={project.title} class="h-full w-full object-contain p-3" loading="lazy" />
+                </div>
+                <div class="p-4">
+                  <div class="mb-2 flex flex-wrap gap-1">
+                    {project.tags.slice(0, 2).map(tag => (
+                      <span class="tag-blue">{tag}</span>
+                    ))}
+                  </div>
+                  <h3 class="text-sm font-bold leading-snug" style="color:var(--text-primary);">{project.title}</h3>
+                  <p class="mt-1.5 text-xs leading-relaxed line-clamp-3" style="color:var(--text-muted);">{project.summary}</p>
+                  {project.paperUrl && (
+                    <a href={project.paperUrl} target="_blank" rel="noreferrer"
+                      class="mt-3 inline-flex items-center gap-1 text-xs font-semibold hover:underline"
+                      style="color:var(--brand-mid);"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                      Paper
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <!-- Scroll progress bar -->
+          <div class="mt-1 h-0.5 w-full overflow-hidden rounded-full" style="background:var(--border-subtle);">
+            <div id="scroll-bar" class="h-full rounded-full transition-all duration-150" style="background:var(--brand-mid); width:20%;"></div>
+          </div>
+        </div>
+
+        <!-- Right arrow -->
+        <button id="scroll-next" aria-label="Next"
+          class="shrink-0 flex h-9 w-9 items-center justify-center border transition-colors hover:border-blue-500 hover:text-blue-600"
+          style="border-color:var(--border-medium); color:var(--text-muted); border-radius:4px; background:var(--surface-card);">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+
       </div>
     </div>
   </section>
 
-  <section class="mx-auto grid max-w-6xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
-    <div>
-      <div class="mb-4 flex items-center justify-between gap-4">
-        <h2 class="section-heading mb-0">Selected Publications</h2>
-        <a href="/publications/" class="shrink-0 text-sm font-semibold text-academic-blue hover:underline">Full list</a>
+  <!-- ===== NEWS — single column, full width ===== -->
+  <section style="background: var(--surface-card); border-top: 1px solid var(--border-subtle);" class="py-12">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-6 flex items-end justify-between gap-4 reveal">
+        <div>
+          <p class="mb-1 text-xs font-bold uppercase tracking-widest" style="color:var(--brand-mid);">Latest Updates</p>
+          <h2 class="section-heading">News</h2>
+        </div>
+        <a href="/news/" class="shrink-0 text-xs font-bold uppercase tracking-wider hover:underline" style="color:var(--brand-mid);">Archive →</a>
       </div>
-      <div>
-        {featuredPapers.map((publication) => <PublicationCard publication={publication} />)}
-      </div>
+      <NewsList items={news.slice(0, 10)} />
     </div>
-    <aside>
-      <div class="mb-4 flex items-center justify-between gap-4">
-        <h2 class="section-heading mb-0">News</h2>
-        <a href="/news/" class="shrink-0 text-sm font-semibold text-academic-blue hover:underline">Archive</a>
-      </div>
-      <NewsList items={news.slice(0, 8)} />
-    </aside>
   </section>
+
 </BaseLayout>
+
+<style>
+  /* Hide scrollbar for carousel */
+  #research-scroll::-webkit-scrollbar { display: none; }
+
+  /* line-clamp utility */
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  const track = document.getElementById('research-scroll') as HTMLElement | null;
+  const bar   = document.getElementById('scroll-bar')     as HTMLElement | null;
+  const CARD_W = 260 + 16; // card width + gap
+
+  // Update progress bar
+  function updateBar() {
+    if (!track || !bar) return;
+    const max = track.scrollWidth - track.clientWidth;
+    const pct = max > 0 ? (track.scrollLeft / max) * 80 + 20 : 20; // 20%–100%
+    bar.style.width = pct + '%';
+  }
+
+  track?.addEventListener('scroll', updateBar, { passive: true });
+  updateBar();
+
+  document.getElementById('scroll-prev')?.addEventListener('click', () => {
+    track?.scrollBy({ left: -CARD_W * 2, behavior: 'smooth' });
+  });
+  document.getElementById('scroll-next')?.addEventListener('click', () => {
+    track?.scrollBy({ left: CARD_W * 2, behavior: 'smooth' });
+  });
+</script>

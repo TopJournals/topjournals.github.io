@@ -1,0 +1,22 @@
+{
+  "year": 2021,
+  "authors": "Xin Shi, Wenhe Liao*, Tingting Liu*, Changdong Zhang, Dawei Li, Weiming Jiang, Cong Wang, Fangxi Ren",
+  "title": "Design optimization of multimorphology surface-based lattice structures with density gradients",
+  "venue": "The International Journal of Advanced Manufacturing Technology, 2021, 117(7): 2013-2028",
+  "tags": [
+    "Surface-based lattice",
+    "Density gradient",
+    "Optimization"
+  ],
+  "paperUrl": "https://doi.org/10.1007/s00170-021-07175-3",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2021-design-optimization-of-multimorphology-surface-bas",
+  "firstAuthor": "Xin Shi"
+}

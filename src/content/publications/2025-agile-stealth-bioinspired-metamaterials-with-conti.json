@@ -1,0 +1,22 @@
+{
+  "year": 2025,
+  "authors": "Gang Wang#, Dawei Li#, Wenhe Liao*, Tingting Liu",
+  "title": "Agile Stealth: Bioinspired Metamaterials with Continuous Dynamic Tuning",
+  "venue": "Advanced Materials, 2025, e11070",
+  "tags": [
+    "Bioinspired",
+    "Dynamic tuning",
+    "Stealth"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1002/adma.202511070",
+  "featured": true,
+  "highlyCited": false,
+  "researchCategory": "Electromagnetic & Stealth Metastructures",
+  "designCategories": [
+    "Bio-inspired Design",
+    "Reconfigurable & Tunable Design"
+  ],
+  "slug": "2025-agile-stealth-bioinspired-metamaterials-with-conti",
+  "firstAuthor": "Gang Wang#"
+}

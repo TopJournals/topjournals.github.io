@@ -1,4 +1,3 @@
-import honorsData from './content/honors.json';
 
 export type Honor = {
   year: number;
@@ -6,4 +5,6 @@ export type Honor = {
   description: string;
 };
 
-export const honors: Honor[] = honorsData as Honor[];
+const files = import.meta.glob('../content/honors/*.json', { eager: true });
+export const honors: Honor[] = (Object.values(files).map((mod: any) => mod.default) as Honor[])
+  .sort((a, b) => b.year - a.year);

@@ -1,4 +1,5 @@
-import siteProfileData from './content/site-profile.json';
+const profileData = import.meta.glob('../content/site-profile/index.json', { eager: true });
+const profile = ((Object.values(profileData)[0] as any)?.default || {}) as SiteProfile;
 
 export type SiteProfile = {
   name: string;
@@ -17,7 +18,7 @@ export type SiteProfile = {
   professionalActivities: string[];
 };
 
-const profile = (siteProfileData as SiteProfile[])[0];
+// const profile = (siteProfileData as SiteProfile[])[0];
 
 export const site = {
   name: profile.name,

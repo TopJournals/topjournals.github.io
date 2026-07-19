@@ -1,0 +1,22 @@
+{
+  "year": 2023,
+  "authors": "Xinze Shen, Changdong Zhang, Xiuyi Jia, Dawei Li, Tingting Liu*, Sukun Tian, Wei Wei, Yuchun Sun*, Wenhe Liao*",
+  "title": "TranSDFNet: Transformer-Based Truncated Signed Distance Fields for The Shape Design of Removable Partial Denture Clasps",
+  "venue": "IEEE Journal of Biomedical and Health Informatics, 2023, 27(10): 4950-4960",
+  "tags": [
+    "Transformer",
+    "Signed distance field",
+    "Biomedical design"
+  ],
+  "status": "Published",
+  "paperUrl": "https://ieeexplore.ieee.org/document/10188897",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Biomedical & Programmable Structures",
+  "designCategories": [
+    "AI & Data-driven Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2023-transdfnet-transformer-based-truncated-signed-dist",
+  "firstAuthor": "Xinze Shen"
+}

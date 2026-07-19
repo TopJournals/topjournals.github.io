@@ -1,0 +1,21 @@
+{
+  "year": 2025,
+  "authors": "Yanheng Lin, Xiaoming Wang, Zhuoheng Liang, Dawei Li, Tingting Liu, Wenhe Liao, Changdong Zhang*",
+  "title": "Optimization Design of Multi-Scale TPMS Lattices Based on Geometric Continuity Fusion and Strain Energy Driven",
+  "venue": "Composite Structures, 2025, 354: 118759",
+  "tags": [
+    "TPMS",
+    "Multi-scale",
+    "Strain energy"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1016/j.compstruct.2024.118759",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2025-optimization-design-of-multi-scale-tpms-lattices-b",
+  "firstAuthor": "Yanheng Lin"
+}

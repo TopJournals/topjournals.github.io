@@ -1,0 +1,22 @@
+{
+  "year": 2022,
+  "authors": "Zhongkai Ji#, Dawei Li#*, Wenhe Liao, Yi Min Xie",
+  "title": "AI-aided design of multiscale lattice metastructures for controllable anisotropy",
+  "venue": "Materials & Design, 2022, 223: 111254",
+  "tags": [
+    "AI-aided design",
+    "Lattice",
+    "Anisotropy"
+  ],
+  "paperUrl": "https://doi.org/10.1016/j.matdes.2022.111254",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "AI & Data-driven Design",
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2022-ai-aided-design-of-multiscale-lattice-metastructur",
+  "firstAuthor": "Zhongkai Ji#"
+}

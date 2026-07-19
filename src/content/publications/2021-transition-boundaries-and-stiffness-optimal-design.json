@@ -1,0 +1,21 @@
+{
+  "year": 2021,
+  "authors": "Fangxi Ren, Changdong Zhang*, Wenhe Liao, Tingting Liu, Dawei Li, Xin Shi, Weiming Jiang, Cong Wang, Junfeng Qi, Yi Chen, Zhen Wang",
+  "title": "Transition boundaries and stiffness optimal design for multi-TPMS lattices",
+  "venue": "Materials & Design, 2021, 210: 110062",
+  "tags": [
+    "Multi-TPMS",
+    "Transition boundary",
+    "Stiffness design"
+  ],
+  "paperUrl": "https://doi.org/10.1016/j.matdes.2021.110062",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2021-transition-boundaries-and-stiffness-optimal-design",
+  "firstAuthor": "Fangxi Ren"
+}

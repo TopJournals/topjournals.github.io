@@ -1,7 +1,3 @@
-import patentData from './content/patents.json';
-import softwareData from './content/software.json';
-import standardsData from './content/standards.json';
-
 export type SoftwareRecord = {
   year: number;
   holders: string;
@@ -23,6 +19,14 @@ export type StandardRecord = {
   code: string;
 };
 
-export const softwareRecords: SoftwareRecord[] = softwareData as SoftwareRecord[];
-export const patentRecords: PatentRecord[] = patentData as PatentRecord[];
-export const standardRecords: StandardRecord[] = standardsData as StandardRecord[];
+const softwareFiles = import.meta.glob('../content/software/*.json', { eager: true });
+export const softwareRecords: SoftwareRecord[] = (Object.values(softwareFiles).map((mod: any) => mod.default) as SoftwareRecord[])
+  .sort((a, b) => b.year - a.year);
+
+const patentFiles = import.meta.glob('../content/patents/*.json', { eager: true });
+export const patentRecords: PatentRecord[] = (Object.values(patentFiles).map((mod: any) => mod.default) as PatentRecord[])
+  .sort((a, b) => b.year - a.year);
+
+const standardFiles = import.meta.glob('../content/standards/*.json', { eager: true });
+export const standardRecords: StandardRecord[] = (Object.values(standardFiles).map((mod: any) => mod.default) as StandardRecord[])
+  .sort((a, b) => b.year - a.year);

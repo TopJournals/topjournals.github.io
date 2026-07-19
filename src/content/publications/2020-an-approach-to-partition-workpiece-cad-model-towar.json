@@ -1,0 +1,21 @@
+{
+  "year": 2020,
+  "authors": "Hao Liu*, Lei Liu, Dawei Li, Renkai Huang, Ning Dai",
+  "title": "An approach to partition workpiece CAD model towards 5-axis support-free 3D printing",
+  "venue": "The International Journal of Advanced Manufacturing Technology, 2020, 106(1): 683-699",
+  "tags": [
+    "CAD partition",
+    "5-axis printing",
+    "Support-free"
+  ],
+  "paperUrl": "https://doi.org/10.1007/s00170-019-04495-3",
+  "featured": false,
+  "highlyCited": false,
+  "status": "",
+  "researchCategory": "Manufacturing & Computational Design",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2020-an-approach-to-partition-workpiece-cad-model-towar",
+  "firstAuthor": "Hao Liu*"
+}
