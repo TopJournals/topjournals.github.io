@@ -10,6 +10,7 @@ export type Publication = {
   designCategories: string[];
   featured?: boolean;
   highlyCited?: boolean;
+  addedAt?: string;
   paperUrl?: string;
 };
 
@@ -54,7 +55,12 @@ const pub = (
 
 const files = import.meta.glob('../content/publications/*.json', { eager: true });
 export const publications: Publication[] = (Object.values(files).map((mod: any) => pub(mod.default)))
-  .sort((a, b) => b.year - a.year);
+  .sort((a, b) => {
+    const addedA = a.addedAt ? Date.parse(a.addedAt) : 0;
+    const addedB = b.addedAt ? Date.parse(b.addedAt) : 0;
+    const addedOrder = (Number.isNaN(addedB) ? 0 : addedB) - (Number.isNaN(addedA) ? 0 : addedA);
+    return addedOrder || b.year - a.year;
+  });
 
 export const publicationYears = Array.from(new Set(publications.map((item) => item.year))).sort(
   (a, b) => b - a

@@ -26,6 +26,7 @@ export default config({
         paperUrl: fields.text({ label: 'Paper URL' }),
         featured: fields.checkbox({ label: 'Featured', defaultValue: false }),
         highlyCited: fields.checkbox({ label: 'Highly Cited', defaultValue: false }),
+        addedAt: fields.text({ label: 'Added At', description: 'ISO timestamp used to show newly added publications first' }),
         status: fields.text({ label: 'Status' }),
         researchCategory: fields.text({ label: 'Research Category' }),
         designCategories: fields.array(fields.text({ label: 'Design Category' }), { label: 'Design Categories', itemLabel: props => props.value })
