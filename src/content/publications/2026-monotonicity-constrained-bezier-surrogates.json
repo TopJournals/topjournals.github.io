@@ -1,0 +1,23 @@
+{
+  "year": 2026,
+  "addedAt": "2026-08-13T15:48:13+08:00",
+  "title": "Monotonicity-constrained Bézier surrogates for thermoelastic multiscale optimization of heterogeneous lattices",
+  "authors": "Xinze Shen, Changdong Zhang*, Weimin Jiang, Kanghui Song, Xudong Li, Zhendong Yang, Wenhe Liao*, Dawei Li, Tingting Liu",
+  "venue": "Computer Methods in Applied Mechanics and Engineering, 2026",
+  "tags": [
+    "Bézier surrogate",
+    "Thermoelastic optimization",
+    "Heterogeneous lattice"
+  ],
+  "paperUrl": "https://doi.org/10.1016/j.cma.2026.119279",
+  "status": "Published",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "AI & Data-driven Design",
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2026-monotonicity-constrained-bezier-surrogates",
+  "firstAuthor": "Xinze Shen"
+}
