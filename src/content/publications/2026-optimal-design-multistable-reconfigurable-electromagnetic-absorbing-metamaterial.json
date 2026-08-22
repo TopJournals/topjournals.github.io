@@ -1,0 +1,22 @@
+{
+  "year": 2026,
+  "addedAt": "2026-08-22T17:15:16+08:00",
+  "title": "Optimal design and application of multistable reconfigurable electromagnetic absorbing metamaterial",
+  "authors": "Gang Wang, Dawei Li*, Wenhe Liao*, Tingting Liu, Changdong Zhang, Yutong Huang, Yingzhi Xiong",
+  "venue": "Composite Structures, 2026",
+  "tags": [
+    "Multistability",
+    "Reconfigurable metamaterial",
+    "Electromagnetic absorption"
+  ],
+  "paperUrl": "https://doi.org/10.1016/j.compstruct.2026.120788",
+  "status": "Published",
+  "featured": false,
+  "highlyCited": false,
+  "researchCategory": "Electromagnetic & Stealth Metastructures",
+  "designCategories": [
+    "Reconfigurable & Tunable Design"
+  ],
+  "slug": "2026-optimal-design-multistable-reconfigurable-electromagnetic-absorbing-metamaterial",
+  "firstAuthor": "Gang Wang"
+}
