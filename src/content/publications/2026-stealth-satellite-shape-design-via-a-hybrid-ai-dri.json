@@ -1,18 +1,18 @@
 {
   "year": 2026,
   "addedAt": "2026-07-19T22:03:02+08:00",
-  "authors": "Ruijiang Fan, Wenhe Liao*, Dawei Li*, Tingting Liu, Kan Zheng",
-  "title": "Stealth Satellite Shape Design via a Hybrid AI-Driven Optimization Framework Enabling Tunable RCS",
-  "venue": "Chinese Journal of Aeronautics, Accepted, 2026",
+  "authors": "Ruijiang Fan, Wenhe Liao*, Dawei Li, Tingting Liu, Kan Zheng",
+  "title": "A hybrid AI-driven framework for wide-angle low-RCS stealth satellite design and adjustable nose cone implementation",
+  "venue": "Chinese Journal of Aeronautics, 2026",
   "tags": [
     "AI-driven design",
     "Satellite",
     "RCS"
   ],
-  "status": "Accepted",
+  "status": "Published",
   "featured": false,
   "highlyCited": false,
-  "paperUrl": "",
+  "paperUrl": "https://doi.org/10.1016/j.cja.2026.104485",
   "researchCategory": "Electromagnetic & Stealth Metastructures",
   "designCategories": [
     "AI & Data-driven Design",

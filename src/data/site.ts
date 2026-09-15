@@ -16,6 +16,12 @@ export type SiteProfile = {
   researchGateUrl: string;
   biography: string[];
   professionalActivities: string[];
+  advisor?: string;
+  advisorChinese?: string;
+  advisorRole?: string;
+  advisorAvatar?: string;
+  advisorAffiliation?: string;
+  advisorEmail?: string;
 };
 
 // const profile = (siteProfileData as SiteProfile[])[0];
@@ -32,7 +38,13 @@ export const site = {
   address: profile.address,
   email: profile.email,
   scholarUrl: profile.scholarUrl,
-  researchGateUrl: profile.researchGateUrl
+  researchGateUrl: profile.researchGateUrl,
+  advisor: profile.advisor || 'Wenhe Liao',
+  advisorChinese: profile.advisorChinese || '廖文和',
+  advisorRole: profile.advisorRole || 'Professor',
+  advisorAvatar: profile.advisorAvatar || '/assets/avatars/wenhe-liao.png',
+  advisorAffiliation: profile.advisorAffiliation || 'School of Mechanical Engineering, Nanjing University of Science and Technology',
+  advisorEmail: profile.advisorEmail || 'cnwho@njust.edu.cn'
 };
 
 export const biography = profile.biography;

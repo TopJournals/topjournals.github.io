@@ -1,0 +1,22 @@
+{
+  "year": 2026,
+  "addedAt": "2026-09-15T11:20:00+08:00",
+  "authors": "Cheng Chen, Wenhe Liao*, Dawei Li, TingTing Liu, Gang Wang, Yingzhi Xiong, Junming Zhao",
+  "title": "Adaptive Kriging Surrogates for Optimizing Wideband Low-Scattering Shapes",
+  "venue": "IEEE Transactions on Antennas and Propagation, 2026",
+  "tags": [
+    "Adaptive Kriging",
+    "Surrogate model",
+    "Low scattering"
+  ],
+  "featured": false,
+  "highlyCited": false,
+  "paperUrl": "",
+  "status": "Submitted",
+  "researchCategory": "Electromagnetic & Stealth Metastructures",
+  "designCategories": [
+    "AI & Data-driven Design"
+  ],
+  "slug": "2026-adaptive-kriging-surrogates-for-optimizing-wideband-low-sc",
+  "firstAuthor": "Cheng Chen"
+}
