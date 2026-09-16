@@ -1,0 +1,23 @@
+{
+  "year": 2026,
+  "addedAt": "2026-09-16T13:45:00+08:00",
+  "authors": "Zhongkai Ji, Dawei Li*, Yong Zhao*, Zhiying Zhou, Wenhe Liao, Yi Min Xie",
+  "title": "A geometry-aware sub-voxel homogenization method for complex implicit metamaterials",
+  "venue": "Engineering Structures, Accepted, 2026",
+  "tags": [
+    "Sub-voxel",
+    "Homogenization",
+    "Implicit metamaterials"
+  ],
+  "status": "Accepted",
+  "featured": true,
+  "highlyCited": false,
+  "paperUrl": "",
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "Manufacturing-aware & CAD Modeling",
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2026-a-geometry-aware-sub-voxel-homogenization-method-for-co",
+  "firstAuthor": "Zhongkai Ji"
+}
