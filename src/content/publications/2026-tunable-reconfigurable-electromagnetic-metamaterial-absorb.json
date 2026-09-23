@@ -1,0 +1,23 @@
+{
+  "year": 2026,
+  "addedAt": "2026-09-23T18:20:00+08:00",
+  "title": "Tunable/Reconfigurable Electromagnetic Metamaterial Absorbers: Mechanisms, Design and Future Development",
+  "authors": "Gang Wang, Wenhe Liao*, Dawei Li, Junming Zhao, Tian Jiang, Tingting Liu",
+  "venue": "Advanced Materials Technologies, Revised, 2026",
+  "tags": [
+    "Review",
+    "Tunable metamaterial",
+    "Reconfigurable absorber",
+    "EM absorption"
+  ],
+  "featured": false,
+  "highlyCited": false,
+  "paperUrl": "",
+  "status": "Revise",
+  "researchCategory": "Electromagnetic & Stealth Metastructures",
+  "designCategories": [
+    "Reconfigurable & Tunable Design"
+  ],
+  "slug": "2026-tunable-reconfigurable-electromagnetic-metamaterial-absorb",
+  "firstAuthor": "Gang Wang"
+}
