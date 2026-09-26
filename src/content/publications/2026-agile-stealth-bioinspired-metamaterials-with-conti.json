@@ -1,8 +1,8 @@
 {
-  "year": 2025,
+  "year": 2026,
   "authors": "Gang Wang#, Dawei Li#, Wenhe Liao*, Tingting Liu",
   "title": "Agile Stealth: Bioinspired Metamaterials with Continuous Dynamic Tuning",
-  "venue": "Advanced Materials, 2025, e11070",
+  "venue": "Advanced Materials, 2026, e11070",
   "tags": [
     "Bioinspired",
     "Dynamic tuning",
@@ -17,6 +17,7 @@
     "Bio-inspired Design",
     "Reconfigurable & Tunable Design"
   ],
-  "slug": "2025-agile-stealth-bioinspired-metamaterials-with-conti",
-  "firstAuthor": "Gang Wang#"
+  "slug": "2026-agile-stealth-bioinspired-metamaterials-with-conti",
+  "firstAuthor": "Gang Wang#",
+  "order": 1
 }

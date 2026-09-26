@@ -12,6 +12,7 @@ export type Publication = {
   highlyCited?: boolean;
   addedAt?: string;
   paperUrl?: string;
+  order?: number;
 };
 
 const researchCategoryOrder = [
@@ -59,7 +60,14 @@ export const publications: Publication[] = (Object.values(files).map((mod: any) 
     const addedA = a.addedAt ? Date.parse(a.addedAt) : 0;
     const addedB = b.addedAt ? Date.parse(b.addedAt) : 0;
     const addedOrder = (Number.isNaN(addedB) ? 0 : addedB) - (Number.isNaN(addedA) ? 0 : addedA);
-    return addedOrder || b.year - a.year;
+    if (addedOrder) return addedOrder;
+
+    const yearDiff = b.year - a.year;
+    if (yearDiff) return yearDiff;
+
+    const orderA = a.order ?? 0;
+    const orderB = b.order ?? 0;
+    return orderA - orderB;
   });
 
 export const publicationYears = Array.from(new Set(publications.map((item) => item.year))).sort(

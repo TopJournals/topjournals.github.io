@@ -36,7 +36,8 @@ export const publications = defineCollection({
     addedAt: z.string().optional(),
     status: z.string().optional(),
     researchCategory: z.string().optional(),
-    designCategories: z.array(z.string()).optional()
+    designCategories: z.array(z.string()).optional(),
+    order: z.number().optional()
   })
 });
 
