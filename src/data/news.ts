@@ -1,6 +1,6 @@
-
 export type NewsItem = {
   date: string;
+  title?: string;
   text: string;
   highlight?: boolean;
 };

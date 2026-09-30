@@ -45,6 +45,7 @@ export const news = defineCollection({
   type: 'data',
   schema: z.object({
     date: z.string().optional(),
+    title: z.string().optional(),
     text: z.string().optional(),
     highlight: z.boolean().optional()
   })
