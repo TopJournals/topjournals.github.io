@@ -1,0 +1,24 @@
+{
+  "year": 2026,
+  "authors": "Weiping Li, Dawei Li*, Wenhe Liao*, Tingting Liu, Zhongkai Ji, Yi Min Xie",
+  "title": "Data-Driven Multiscale Topology Optimization of Heterogeneous TPMS-Based Metastructures through Graded Interface Tailoring",
+  "venue": "Computer-Aided Design, 2026, 104197",
+  "tags": [
+    "Data-driven design",
+    "Multiscale topology optimization",
+    "Heterogeneous metastructures",
+    "TPMS"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1016/j.cad.2026.104197",
+  "featured": true,
+  "highlyCited": false,
+  "researchCategory": "Mechanical Metamaterials & Lattices",
+  "designCategories": [
+    "AI & Data-driven Design",
+    "Topology, Gradient & Heterogeneous Design"
+  ],
+  "slug": "2026-data-driven-multiscale-topology-optimization-of-hetero",
+  "firstAuthor": "Weiping Li",
+  "addedAt": "2026-10-18T15:30:00+08:00"
+}

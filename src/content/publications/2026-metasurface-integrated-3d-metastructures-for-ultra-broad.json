@@ -1,0 +1,24 @@
+{
+  "year": 2026,
+  "authors": "Weiping Li#, Dawei Li#*, Wenhe Liao*, Tingting Liu, Changdong Zhang",
+  "title": "Metasurface-Integrated 3D Metastructures for Ultra-Broadband Electromagnetic Stealth",
+  "venue": "Laser & Photonics Reviews, 2026",
+  "tags": [
+    "Metasurface",
+    "Ultra-broadband stealth",
+    "Electromagnetic absorption",
+    "3D metastructures"
+  ],
+  "status": "Published",
+  "paperUrl": "https://doi.org/10.1002/lpor.72087",
+  "featured": true,
+  "highlyCited": false,
+  "researchCategory": "Electromagnetic & Stealth Metastructures",
+  "designCategories": [
+    "Topology, Gradient & Heterogeneous Design",
+    "Manufacturing-aware & CAD Modeling"
+  ],
+  "slug": "2026-metasurface-integrated-3d-metastructures-for-ultra-broad",
+  "firstAuthor": "Weiping Li#",
+  "addedAt": "2026-10-19T10:00:00+08:00"
+}
