@@ -77,6 +77,7 @@ export const conference = defineCollection({
   type: 'data',
   schema: z.object({
     kind: z.string().optional(),
+    type: z.string().optional(),
     title: z.string().optional(),
     contributors: z.string().optional(),
     venue: z.string().optional(),
