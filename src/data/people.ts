@@ -1,5 +1,3 @@
-
-
 export type Person = {
   name: string;
   role: string;
@@ -28,7 +26,9 @@ export const people: Person[] = (Object.values(files).map((mod: any) => mod.defa
       return roleA - roleB;
     }
     // Then sort by start date
-    const startA = parseFloat(a.start) || 0;
-    const startB = parseFloat(b.start) || 0;
-    return startA - startB;
+    const parseStart = (str: string) => {
+      const parts = str.split('.').map(Number);
+      return parts.length === 2 ? parts[0] * 100 + parts[1] : parseFloat(str) || 0;
+    };
+    return parseStart(a.start) - parseStart(b.start);
   });
